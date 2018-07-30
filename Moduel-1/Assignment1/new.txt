@@ -5,7 +5,7 @@ Pseudo code
 3. if n > 0:
 	a. Set size = n
 	b. Set temp = 0
-	c. Set maxvalue = 0
+	c. Set maxvalue = 1
 	d. Set max = 0
 	e. Do the following n-1 times, i starts at 0:
 		  i. Set temp = numarr[i]
