@@ -5,7 +5,7 @@ This program prints string if one of the given input is string or prints bigger
 '''
 VARA = 5
 VARB = 7
-if isinstance(VARA) == str  or isinstance(VARB) == str:
+if (isinstance(VARA, str)  or isinstance(VARB, str)):
     print("string involved")
 elif VARA > VARB:
     print("bigger")
