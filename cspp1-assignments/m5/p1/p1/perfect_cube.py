@@ -28,7 +28,7 @@ def main():
         else:
             guess += inc
     if abs(guess**3 - cube_n) >= epsilon:
-        print(str(cube_n) +" "+"is not perfect cube")
+        print(str(cube_n) +" "+"is not a perfect cube")
     else:
         print(str(cube_n) +" "+ "is a perfect cube")
 if __name__ == "__main__":
