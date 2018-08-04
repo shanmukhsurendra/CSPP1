@@ -11,6 +11,13 @@ def main():
     '''
     n_n = int(input())
     res_n = 1
+    if n_n < 0:
+        n_n = -n_n
+        while n_n > 0:
+            a_n = n_n % 10
+            res_n = res_n * a_n
+            n_n = n_n // 10
+        print(-res_n)
     while n_n > 0:
         a_n = n_n % 10
         res_n = res_n * a_n
