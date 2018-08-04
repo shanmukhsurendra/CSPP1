@@ -10,7 +10,7 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     n_n = int(input())
-    n_n = b_n
+    b_n = n_n
     res_n = 1
     while n_n > 0:
         a_n = n_n % 10
