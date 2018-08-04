@@ -18,15 +18,16 @@ def main():
     '''
     n_n = int(input())
     epsilon = 0.01
+    mid = n_n/2
     low = 0
     high = n_n
-    mid = n_n/2
     while abs(mid**2-n_n) >= epsilon:
         if mid**2 < n_n:
             low = mid
         else:
             high = mid
         mid = (low + high)/2
-        print(mid)
+        print(str(mid))
+
 if __name__ == "__main__":
     main()
