@@ -20,7 +20,7 @@ def main():
     epsilon = 0.01
     low = 0
     high = n_n
-    mid = num/2
+    mid = n_n/2
     while abs(mid**2-n_n) >= epsilon:
         if mid**2 < n_n:
             low = mid
