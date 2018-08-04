@@ -10,6 +10,8 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     n_n = int(input())
+    if n_n == 0:
+        print(n_n)
     res_n = 1
     while n_n > 0:
         a_n = n_n % 10
