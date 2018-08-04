@@ -27,7 +27,7 @@ def main():
         else:
             high = mid
         mid = (low + high)/2
-        print(str(mid))
+    print(str(mid))
 
 if __name__ == "__main__":
     main()
