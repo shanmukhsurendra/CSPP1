@@ -13,7 +13,7 @@ def main():
     res_n = 1
     res_m = 0
     neg_n = 1
-    if n_n < 0:
+    if int(n_n) < 0:
        n_n = -int(input())
        for j in str(n_n):
            neg_n = int(j)*neg_n
