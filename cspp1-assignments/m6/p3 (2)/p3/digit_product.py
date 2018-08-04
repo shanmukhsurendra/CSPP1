@@ -1,7 +1,7 @@
 '''
-Given a  number int_input, find the product of all the digits
-example: 
-	input: 123
+Given a  number int_input, find the product of all the digit
+example:
+input: 123
 	output: 6
     @author:shanmukhsurendra
 '''
