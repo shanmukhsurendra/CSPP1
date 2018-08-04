@@ -26,7 +26,3 @@ def main():
         print(b_n)
 if __name__ == "__main__":
     main()
-
-
-if __name__ == "__main__":
-    main()
