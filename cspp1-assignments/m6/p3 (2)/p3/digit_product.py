@@ -9,22 +9,22 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    n_n = int(input())
+    n_n = 709
     res_n = 1
-    res_m = 0
-    neg_n = 1
-    if int(n_n) < 0:
-       n_n = -int(input())
-       for j in str(n_n):
-           neg_n = int(j)*neg_n
-    else:
-        for i in n_n:
-            neg_n = int(i)*res_n
-    if int(n_n) < 0:
-        neg_n = - neg_n
-        print(neg_n)
-    else:
+    if n_n < 0:
+        n_n = -n_n
+        while n_n > 0:
+            a_n = n_n % 10
+            res_n = res_n * a_n
+            n_n = n_n // 10
+        print(-res_n)
+    if n_n > 0:
+        while n_n > 0:
+            a_n = n_n % 10
+            res_n = res_n * a_n
+            n_n = n_n // 10
         print(res_n)
+
 
 if __name__ == "__main__":
     main()
