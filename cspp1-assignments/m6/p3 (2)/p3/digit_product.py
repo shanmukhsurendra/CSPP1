@@ -9,7 +9,7 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    n_n = -12345
+    n_n = int(input())
     res_n = 1
     res_m = 0
     neg_n = 1
