@@ -9,8 +9,7 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    int_input = int(input())
-     n_n = int(input())
+    n_n = int(input())
     b_n = n_n
     res_n = 1
     if n_n < 0:
