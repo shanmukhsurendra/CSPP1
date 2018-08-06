@@ -60,6 +60,5 @@ def main():
     data = list(map(float, data))
     print(payingdebtoffinayear(data[0],data[1]))
     
-if __name_ _== "__main__":
+if __name__ == "__main__":
     main()
-    
