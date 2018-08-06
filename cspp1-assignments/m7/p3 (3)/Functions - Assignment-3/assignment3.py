@@ -47,7 +47,7 @@ def payingDebtOffInAYear(balance_in, annual_interestrate):
 		mon_payrate = (up_i+low_i)/2
 		balance_in = init_balance
 		for _ in range(12):
-			ans_i balance_in - mon_payrate
+			ans_i = balance_in - mon_payrate
 			balance_in = ans_i + (ans_i * moninterest_rate)
 		if balance_in > epsilon:
 			low_i = mon_payrate
