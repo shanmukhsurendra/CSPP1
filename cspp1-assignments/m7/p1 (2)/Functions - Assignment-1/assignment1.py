@@ -46,7 +46,7 @@ def payingdebtoffinayear(b_n, air_n, mpr_n):
 
 def main():
     '''
-    taking input as balance, annaulinterestrate, monthly payment rate 
+    taking input as balance, annaulinterestrate, monthly payment rate
     and give remaining balance after one year
     '''
     data = input()
