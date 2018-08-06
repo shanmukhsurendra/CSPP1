@@ -15,11 +15,11 @@ constant amount that will be
 # balance - the outstanding balance on the credit card
 # annualInterestRate - annual interest rate as a decimal
 
-# The program should print out one line: the lowest monthly payment that 
+# The program should print out one line: the lowest monthly payment that
 will pay off all debt in under 1 year, for example:
 # Lowest Payment: 180
 
-# Assume that the interest is compounded monthly according to the balance 
+# Assume that the interest is compounded monthly according to the balance
 at the end of the month (after the payment
 for that month is
 # made).
@@ -52,7 +52,7 @@ def payingdebtoffinayear(balance_p, annual_interestrate,set_min):
         balance_p = monthly_unpaid + (monthly_interest * monthly_unpaid)
         if monthly_unpaid <= 0 and month == 12:
             return minimum_fixed
-        if month ==12 and monthly_unpaid > 0:
+        if month == 12 and monthly_unpaid > 0:
             month = 0
             minimum_fixed += 10
             balance_p = set_min
@@ -64,7 +64,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest payment: ", (payingdebtoffinayear(data[0], data[1], data[0])))
+    print("Lowest payment: ",(payingdebtoffinayear(data[0], data[1], data[0])))
     
 if __name__ == "__main__":
     main()
