@@ -30,13 +30,14 @@ balance to become
 required math is found below:
 # Monthly interest rate = (Annual interest rate) / 12.0
 # Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
-# Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
+# Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
+Monthly unpaid balance)
 @author: shanmukhsurendra
 '''
 
 
 
-def payingdebtoffinayear(balance_p, annual_interestrate,set_min):
+def payingdebtoffinayear(balance_p, annual_interestrate, set_min):
     """
     to calculate min lowest patment to be done
     """
@@ -64,7 +65,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment:",(payingdebtoffinayear(data[0], data[1], data[0])))
-    
+    print("Lowest Payment:", (payingdebtoffinayear(data[0], data[1], data[0])))
 if __name__ == "__main__":
     main()
