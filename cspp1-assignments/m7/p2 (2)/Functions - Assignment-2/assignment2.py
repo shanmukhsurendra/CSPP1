@@ -58,7 +58,8 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingDebtOffInAYear(data[0],data[1]))
+    print(payingdebtoffinayear(data[0],data[1]))
     
-if __name__== "__main__":
+if __name_ _== "__main__":
     main()
+    
