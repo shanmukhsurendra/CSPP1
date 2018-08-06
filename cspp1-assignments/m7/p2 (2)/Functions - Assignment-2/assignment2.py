@@ -31,34 +31,34 @@ balance to become
 
 
 def payingdebtoffinayear(balance_p, annual_interestrate,set_min):
-	"""
-	to calculate min lowest patment to be done
-	"""
-	if balance_p <= 0:
-		minimum_fixed = 0
-		return minimum_fixed
-	minimum_fixed = 10
-	month = 0
-	monthly_interest = (annual_interestrate)/12.0
-	while month <= 12:
-		month += 1
-		monthly_unpaid = balance_p - minimum_fixed
-		balance_p = monthly_unpaid + (monthly_interest * monthly_unpaid)
-		if monthly_unpaid <= 0 and month == 12:
-			return minimum_fixed
-		if month ==12 and monthly_unpaid > 0:
-			month = 0
-			minimum_fixed += 10
-			balance_p = set_min	
+    """
+    to calculate min lowest patment to be done
+    """
+    if balance_p <= 0:
+        minimum_fixed = 0
+        return minimum_fixed
+    minimum_fixed = 10
+    month = 0
+    monthly_interest = (annual_interestrate)/12.0
+    while month <= 12:
+        month += 1
+        monthly_unpaid = balance_p - minimum_fixed
+        balance_p = monthly_unpaid + (monthly_interest * monthly_unpaid)
+        if monthly_unpaid <= 0 and month == 12:
+            return minimum_fixed
+        if month ==12 and monthly_unpaid > 0:
+            month = 0
+            minimum_fixed += 10
+            balance_p = set_min
 
 def main():
-	"""
-	to calculate min lowest patment to be done
-	"""
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print(payingDebtOffInAYear(data[0],data[1]))
-	
+    """
+    to calculate min lowest patment to be done
+    """
+    data = input()
+    data = data.split(' ')
+    data = list(map(float, data))
+    print(payingDebtOffInAYear(data[0],data[1]))
+    
 if __name__== "__main__":
-	main()
+    main()
