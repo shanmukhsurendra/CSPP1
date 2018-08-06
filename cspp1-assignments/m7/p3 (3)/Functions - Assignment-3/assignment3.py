@@ -37,7 +37,7 @@
 
 
 
-def payingDebtOffInAYear(balance_in, annual_interestrate):
+def payingdebtoffinayear(balance_in, annual_interestrate):
 	init_balance = balance_in
 	moninterest_rate = annual_interestrate/12
 	low_i = init_balance/12
