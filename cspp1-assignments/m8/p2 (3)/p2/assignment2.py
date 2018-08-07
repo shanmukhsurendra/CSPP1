@@ -5,7 +5,7 @@
 # This function takes in one number and returns one number.
 '''
 
-def sumofdigits(n):
+def sumofdigits(n_n):
     '''
     n is positive Integer
 
