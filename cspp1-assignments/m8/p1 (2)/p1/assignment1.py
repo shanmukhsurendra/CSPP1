@@ -13,7 +13,7 @@ def factorial(n_n):
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    if n_n == 0 or n_n == 1:
+    if n_n in (0, 1):
         return 1
     return n_n*factorial(n_n-1)
 
