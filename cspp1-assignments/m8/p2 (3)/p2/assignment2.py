@@ -14,7 +14,7 @@ def sumofdigits(n_n):
     # Your code here
     if n_n == 0:
     	return n_n
-    return n_n % 10 +sumofdigits(n_n)
+    return n_n % 10 +sumofdigits(n_n//10)
 def main():
     '''
     n is positive Integer
