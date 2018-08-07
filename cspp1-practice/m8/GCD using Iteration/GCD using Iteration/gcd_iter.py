@@ -12,7 +12,6 @@ def gcdIter(a, b):
     '''
     # Your code here
     maxe =max(a, b)
-    res = 0
     if a  == 0 or b  == 0:
         return 0
     else:
