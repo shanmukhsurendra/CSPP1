@@ -21,8 +21,8 @@ def main():
 
     returns: a positive integer, the sum of digits of n.
     '''
-    a = input()
-    print(sumofdigits(int(a)))  
+    a = int(input())
+    print(sumofdigits(int(a)))
 
 if __name__== "__main__":
     main()
