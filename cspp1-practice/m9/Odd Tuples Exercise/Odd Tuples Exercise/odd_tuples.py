@@ -12,11 +12,9 @@ def oddTuples(aTup):
     # Your Code Here
     t = ()
     i = 0
-    l = len(aTup)
     for j in aTup:
     	if i%2 == 0:
     		t = t + tuple(j)
-
     	i += 1
     return t
     
