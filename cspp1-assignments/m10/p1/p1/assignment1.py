@@ -17,8 +17,7 @@ def get_available_letters(letters_guessed):
     for i in str_s:
         if i not in letters_guessed:
             a_a = a_a + i
-    return a_a 
-
+    return a_a
 
 
 def main():
