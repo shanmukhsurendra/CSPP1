@@ -13,7 +13,7 @@ def integer_division(x_x, a_a):
     while x_x >= a_a:
         count_c += 1
         x_x = x_x - a_a
-    return count_c
+    return count_c 
 
 def main():
     """
