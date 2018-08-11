@@ -33,13 +33,13 @@ def create_social_network(string):
     '''
 
     # remove the pass below and start writing your code
-    d = {}
-    l = []
-    l = string.split("follows")
-    for i in range(0, len(l), 2):
-        if l[i] not in d:
-            d[l[i]] = l[i+1].split(",")
-    return d
+    dictn_n = {}
+    list_l = []
+    list_l = string.split("follows")
+    for i in range(0, len(list_l), 2):
+        if list_l[i] not in dictn_n:
+            dictn_n[list_l[i]] = list_l[i+1].split(",")
+    return dictn_n
 
 
 
