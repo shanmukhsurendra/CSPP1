@@ -35,7 +35,7 @@ def create_social_network(string):
     # remove the pass below and start writing your code
     d = {}
     l = []
-    l = string.split("/n")
+    l = string.split("\n")
     return l
 
 def main():
