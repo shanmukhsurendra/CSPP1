@@ -36,6 +36,7 @@ def create_social_network(string):
     dictn_n = {}
     list_l = []
     list_l = string.split("follows")
+    print(list_1)
     if "follows" not in string:
         return dictn_n
     else:
