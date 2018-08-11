@@ -2,7 +2,7 @@
     Assignment-1 Create Social Network
 '''
 
-#def create_social_network(data):
+def create_social_network(string):
     '''
         The data argument passed to the function is a string
         It represents simple social network data
@@ -31,28 +31,23 @@
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
+
+    # remove the pass below and start writing your code
     d = {}
-    data = []
-    data = string.split()
-    for i in range(0, data(l), 2):
-    		data[l[i]] = data[i+1]
-    #return d
-
-
+    l = []
+    l = string.split(" ")
+    return l
 
 def main():
     '''
         handling testcase input and printing output
     '''
     string = ''
-    l = []
     lines = int(input())
     for i in range(lines):
         i += 1
         string += input()
         string += '\n'
-    s = string.split(follows)
-    l.extend[s]    
 
     print(create_social_network(string))
 
