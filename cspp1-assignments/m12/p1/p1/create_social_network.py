@@ -35,7 +35,7 @@ def create_social_network(string):
     # remove the pass below and start writing your code
     d = {}
     l = []
-    l = string.split("\n")
+    l = string.split("follows")
     return l
 
 def main():
@@ -47,7 +47,7 @@ def main():
     for i in range(lines):
         i += 1
         string += input()
-        string += '\n'
+        #string += '\n'
 
     print(create_social_network(string))
 
