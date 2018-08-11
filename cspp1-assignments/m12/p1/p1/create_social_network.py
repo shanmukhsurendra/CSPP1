@@ -32,6 +32,8 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     d = {}
+    data = []
+    data = string.split()
     for i in range(0, len(l), 2):
     	if i not in d:
     		d[l[i]] = l[i+1]
@@ -47,9 +49,8 @@ def main():
     lines = int(input())
     for i in range(lines):
         i += 1
-        string += input().split()
+        string += input()
         string += '\n'
-        l.extend[string]
 
     print(create_social_network(string))
 
