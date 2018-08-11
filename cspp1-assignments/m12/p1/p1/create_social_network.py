@@ -36,9 +36,12 @@ def create_social_network(string):
     dictn_n = {}
     list_l = []
     list_l = string.split("follows")
-    for i in range(0, len(list_l), 2):
-        if list_l[i] not in dictn_n:
-            dictn_n[list_l[i]] = list_l[i+1].split(",")
+    if "follows" not in string:
+        print(dictn_n)
+    else:
+        for i in range(0, len(list_l), 2):
+            if list_l[i] not in dictn_n:
+                dictn_n[list_l[i]] = list_l[i+1].split(",")
     return dictn_n
 
 
