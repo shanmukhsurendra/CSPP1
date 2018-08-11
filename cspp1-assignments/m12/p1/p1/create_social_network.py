@@ -42,7 +42,7 @@ def create_social_network(string):
         for i in range(0, len(list_l), 2):
             if list_l[i] not in dictn_n:
                 dictn_n[list_l[i]] = list_l[i+1].split(",")
-        return dictn_n
+    return dictn_n
 
 
 
