@@ -19,8 +19,21 @@ def get_word_score(word, n):
     returns: int >= 0
     """
     # TO DO ... <-- Remove this comment when you code this function
-    
-
+    SCRABBLE_LETTER_VALUES = {
+    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
+    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
+    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10 }
+    b = list(word)
+    score = 0
+    length = len(word)
+    for key in b:
+        if key in SCRABBLE_LETTER_VALUES:
+            score = score + SCRABBLE_LETTER_VALUES[key]
+    score = score * length
+    if length == 7:
+        return score + 50
+    else:
+        return score
 
 def main():
     '''
