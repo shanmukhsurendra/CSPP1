@@ -72,18 +72,15 @@ def getWordScore(word, n):
     returns: int >= 0
     """
     # TO DO ... <-- Remove this comment when you code this function
-    l = list(word)
     score = 0
-    for i in l:
-        if i in SCRABBLE_LETTER_VALUES  :
+    for i in word:
+        if i in SCRABBLE_LETTER_VALUES:
             score += SCRABBLE_LETTER_VALUES[i]
     score = score * len(word)
     if len(word) == n:
         return score + 50
     else:
         return score
-
-#
 # Problem #2: Make sure you understand how this function works and what it does!
 #
 def displayHand(hand):
@@ -153,7 +150,8 @@ def updateHand(hand, word):
     # TO DO ... <-- Remove this comment when you code this function
     temp = hand.copy()
     for key in word:
-        temp[key] -= 1
+        if key in hand and hand[key] != 0:
+            temp[key] -= 1
     return temp
 # Problem #3: Test word validity
 #
@@ -194,8 +192,7 @@ def calculateHandlen(hand):
     returns: integer
     """
     # TO DO... <-- Remove this comment when you code this function
-    return len(hand)
-
+    return sum(hand.values())
 def playHand(hand, wordList, n):
     """
     Allows the user to play the given hand, as follows:
@@ -218,31 +215,48 @@ def playHand(hand, wordList, n):
       n: integer (HAND_SIZE; i.e., hand size required for additional points)
       
     """
+
     # BEGIN PSEUDOCODE <-- Remove this comment when you code this function; do your coding within the pseudocode (leaving those comments in-place!)
     # Keep track of the total score
     
     # As long as there are still letters left in the hand:
-    
-        # Display the hand
-        
-        # Ask user for input
-        
+    total_score = 0
+    while  calculateHandlen(hand) > 0:
+        displayHand(hand)
+    # Display the hand
+    # Ask user for input
+        user_inp = input()
         # If the input is a single period:
-        
+        if user_inp == ".":
+            break
+        else:
             # End the game (break out of the loop)
-
-            
         # Otherwise (the input is not a single period):
-        
-            # If the word is not valid:
-            
-                # Reject invalid word (print a message followed by a blank line)
-
-            # Otherwise (the word is valid):
-
-                # Tell the user how many points the word earned, and the updated total score, in one line followed by a blank line
-                
+            if not isValidWord(user_inp, hand, wordList):
+                # If the word is not valid:
+                    # Reject invalid word (print a message followed by a blank line)
+                print("enter valid string\n")
+                # Otherwise (the word is valid):
+            else:
+                    # Tell the user how many points the word earned, and the updated total score, in one line followed by a blank line
+                score = getWordScore(user_inp, n)
+                print(score)
+                print("\n")
+                total_score += score
                 # Update the hand 
+                hand = updateHand(hand, user_inp)
+    print(total_score)    
+
+
+
+            
+
+            
+        
+            
+
+
+                
                 
 
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
@@ -265,7 +279,19 @@ def playGame(wordList):
     2) When done playing the hand, repeat from step 1    
     """
     # TO DO ... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this line when you code the function
+    hand = None
+    while True:
+        user_input = input("choose n(play with new hnad) (or) choose r(play with the last hand ) (or) choose e(exit the game)")
+        if user_input == 'n':
+            hand = dealHand(HAND_SIZE)
+            playHand(hand, wordList, HAND_SIZE)
+        elif user_input == 'r':
+            playHand(hand, wordList, HAND_SIZE)
+        elif user_input == "e":
+            break
+        else:
+            print("enter valid string")
+
    
 
 
