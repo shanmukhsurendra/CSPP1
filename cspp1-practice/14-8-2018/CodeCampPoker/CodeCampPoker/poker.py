@@ -17,11 +17,11 @@ def is_straight(hand):
     dict_values={'T':10,'J':11,'Q':12,'K':13,'A':14,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9}
     lis_new = []
     for h in hand:
-    	lis_new.append(dict_values[h[0]])
+        lis_new.append(dict_values[h[0]])
     lis_new.sort()
     for i in range(len(lis_new)-1):
-    	if lis_new[i+1] - lis_new[i] != 1:
-    		return False
+        if lis_new[i+1] - lis_new[i] != 1:
+            return False
     return True
 
 def is_flush(hand):
@@ -35,8 +35,8 @@ def is_flush(hand):
     '''
     suit = hand[0]
     for h in hand:
-    	if suit[1]!=h[1]:
-    		return False
+        if suit[1]!=h[1]:
+            return False
     return True
     
 def hand_rank(hand):
@@ -64,13 +64,13 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-    	return 3
+        return 3
     elif is_flush(hand):
-    	return 2
+        return 2
     elif is_straight(hand):
-    	return 1
+        return 1
     else:
-    	return 0
+        return 0
 
 def poker(hands):
     '''
@@ -104,4 +104,4 @@ if __name__ == "__main__":
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
     # for h in HANDS:
-    # 	print(is_straight(h))
+    #   print(is_straight(h))
