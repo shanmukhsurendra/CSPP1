@@ -14,7 +14,8 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    dict_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
+    dict_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4,\
+     '5':5, '6':6, '7':7, '8':8, '9':9}
     lis_new = []
     for h_h in hand:
         lis_new.append(dict_values[h_h[0]])
@@ -68,8 +69,7 @@ def hand_rank(hand):
         return 2
     elif is_straight(hand):
         return 1
-    else:
-        return 0
+    return 0
 
 def poker(hands):
     '''
