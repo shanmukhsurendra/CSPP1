@@ -70,13 +70,10 @@ def full_house(hand):
         lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
-        count += 1
+        return True
     elif lis_new[2] == lis_new[3] == lis_new[4] and lis_new[1] == lis_new[2]:
-        count += 1
-    if count == 1:
         return True
     return False
-
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
