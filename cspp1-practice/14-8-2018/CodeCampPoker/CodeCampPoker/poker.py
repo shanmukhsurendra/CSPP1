@@ -34,37 +34,30 @@ def three_of_kind(hand):
     '''
     three of kind
     '''
-    count = 0
     lis_new = []
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     for i in range(len(lis_new)-2):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2]:
-            count += 1
-        if count == 1:
             return True
     return False
 def four_of_kind(hand):
     '''
     four of kind
     '''
-    count = 0
     lis_new = []
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     for i in range(len(lis_new)-3):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
-            count += 1
-        if count == 1:
             return True
     return False
 def full_house(hand):
     '''
     full house
     '''
-    count = 0
     lis_new = []
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
