@@ -4,14 +4,15 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 
-dict_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
+DICT_VALUES = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4,\
+'5':5, '6':6, '7':7, '8':8, '9':9}
 def one_pair(hand):
     '''
     one pair
     '''
     lis_new = []
     for h_h in hand:
-        lis_new.append(dict_values[h_h[0]])
+        lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     s_s = set(lis_new)
     if len(lis_new) - len(s_s) == 1:
@@ -23,7 +24,7 @@ def two_pair(hand):
     '''
     lis_new = []
     for h_h in hand:
-        lis_new.append(dict_values[h_h[0]])
+        lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     s_s = set(lis_new)
     if len(lis_new) - len(s_s) == 2:
@@ -36,7 +37,7 @@ def three_of_kind(hand):
     count = 0
     lis_new = []
     for h_h in hand:
-        lis_new.append(dict_values[h_h[0]])
+        lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     for i in range(len(lis_new)-2):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2]:
@@ -51,7 +52,7 @@ def four_of_kind(hand):
     count = 0
     lis_new = []
     for h_h in hand:
-        lis_new.append(dict_values[h_h[0]])
+        lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     for i in range(len(lis_new)-3):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
@@ -66,7 +67,7 @@ def full_house(hand):
     count = 0
     lis_new = []
     for h_h in hand:
-        lis_new.append(dict_values[h_h[0]])
+        lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
         count += 1
@@ -88,7 +89,7 @@ def is_straight(hand):
     '''
     lis_new = []
     for h_h in hand:
-        lis_new.append(dict_values[h_h[0]])
+        lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     for i in range(len(lis_new)-1):
         if lis_new[i+1] - lis_new[i] != 1:
