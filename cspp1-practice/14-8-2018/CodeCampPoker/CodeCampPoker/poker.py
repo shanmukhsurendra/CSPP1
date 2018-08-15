@@ -4,9 +4,11 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 
-dict_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4, /
-'5':5, '6':6, '7':7, '8':8, '9':9}
+dict_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
 def one_pair(hand):
+    '''
+    one pair
+    '''
     lis_new = []
     for h_h in hand:
         lis_new.append(dict_values[h_h[0]])
@@ -16,6 +18,9 @@ def one_pair(hand):
         return True
     return False
 def two_pair(hand):
+    '''
+    twopair
+    '''
     lis_new = []
     for h_h in hand:
         lis_new.append(dict_values[h_h[0]])
@@ -25,6 +30,9 @@ def two_pair(hand):
         return True
     return False
 def three_of_kind(hand):
+    '''
+    three of kind
+    '''
     count = 0
     lis_new = []
     for h_h in hand:
@@ -37,6 +45,9 @@ def three_of_kind(hand):
             return True
     return False
 def four_of_kind(hand):
+    '''
+    four of kind
+    '''
     count = 0
     lis_new = []
     for h_h in hand:
@@ -49,6 +60,9 @@ def four_of_kind(hand):
             return True
     return False
 def full_house(hand):
+    '''
+    full house
+    '''
     count = 0
     lis_new = []
     for h_h in hand:
