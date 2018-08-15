@@ -4,6 +4,63 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 
+dict_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4,\
+
+'5':5, '6':6, '7':7, '8':8, '9':9}
+def one_pair(hand):
+    lis_new = []
+    for h_h in hand:
+        lis_new.append(dict_values[h_h[0]])
+    lis_new.sort()
+    s_s = set(lis_new)
+    if len(lis_new) - len(s_s) == 1:
+        return True
+    return False
+def two_pair(hand):
+    lis_new = []
+    for h_h in hand:
+        lis_new.append(dict_values[h_h[0]])
+    lis_new.sort()
+    s_s = set(lis_new)
+    if len(lis_new) - len(s_s) == 2:
+        return True
+    return False
+def three_of_kind(hand):
+    count = 0
+    lis_new = []
+    for h_h in hand:
+        lis_new.append(dict_values[h_h[0]])
+    lis_new.sort()
+    for i in range(len(lis_new)-2):
+        if lis_new[i] == lis_new[i+1] == lis_new[i+2]:
+            count += 1
+        if count == 1:
+            return True
+    return False
+def four_of_kind(hand):
+    count = 0
+    lis_new = []
+    for h_h in hand:
+        lis_new.append(dict_values[h_h[0]])
+    lis_new.sort()
+    for i in range(len(lis_new)-3):
+        if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
+            count += 1
+        if count == 1:
+            return True
+    return False
+def full_house(hand):
+    count = 0
+    lis_new=[]
+    lis_new.sort()
+    if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
+        count += 1
+    elif lis_new[2] == lis_new[3] == lis_new[4] and lis_new[1] == lis_new[2]:
+        count += 1
+    if count == 1:
+        return True
+    return False
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,8 +71,6 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    dict_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4,\
-     '5':5, '6':6, '7':7, '8':8, '9':9}
     lis_new = []
     for h_h in hand:
         lis_new.append(dict_values[h_h[0]])
