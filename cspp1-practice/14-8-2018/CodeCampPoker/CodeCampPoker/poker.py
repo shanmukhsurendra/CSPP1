@@ -49,7 +49,9 @@ def four_of_kind(hand):
     return False
 def full_house(hand):
     count = 0
-    lis_new=[]
+    lis_new = []
+    for h_h in hand:
+        lis_new.append(dict_values[h_h[0]])
     lis_new.sort()
     if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
         count += 1
@@ -128,9 +130,9 @@ def hand_rank(hand):
         return 7
     if is_straight(hand) and is_flush(hand):
         return 8
-    elif is_flush(hand):
+    if is_flush(hand):
         return 6
-    elif is_straight(hand):
+    if is_straight(hand):
         return 5
     return 0
 
