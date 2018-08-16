@@ -160,7 +160,7 @@ def hand_rank(hand):
                 card_rank_k = []
                 card_rank_k.append(tem_p)
                 #max(card_rank_k)
-                break        
+                break
         card_value = 7
     elif is_flush(hand):
         card_value = 6
