@@ -120,7 +120,7 @@ def hand_rank(hand):
     elif four_of_kind(hand):
         return 8
     #elif full_house(hand):
-    elif three_of_kind(hand) and one_pair(hand)
+    elif three_of_kind(hand) and one_pair(hand):
         return 7
     elif is_flush(hand):
         return 6
@@ -133,7 +133,7 @@ def hand_rank(hand):
     elif one_pair(hand):
         return 2
     else:
-    	return  1
+        return  1
     # return 0
 
 def poker(hands):
