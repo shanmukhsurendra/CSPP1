@@ -115,22 +115,24 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    if is_straight(hand) and is_flush(hand):
+    face_values = [DICT_VALUES[h[0]] for h in hand]
+    suit_values = [h[1] for h in hand]
+    if is_straight(face_values) and is_flush(suit_values):
         return 9
-    elif four_of_kind(hand):
-        return 8
-    #elif full_house(hand):
     elif three_of_kind(hand) and one_pair(hand):
         return 7
-    elif is_flush(hand):
+    elif is_flush(suit_values):
         return 6
-    elif is_straight(hand):
+    elif is_straight(face_values):
         return 5
-    elif three_of_kind(hand):
+    elif four_of_kind(face_values):
+        return 8
+    #elif full_house(hand):
+    elif three_of_kind(face_values):
         return 4
-    elif two_pair(hand):
+    elif two_pair(face_values):
         return 3
-    elif one_pair(hand):
+    elif one_pair(face_values):
         return 2
     else:
         return  1
