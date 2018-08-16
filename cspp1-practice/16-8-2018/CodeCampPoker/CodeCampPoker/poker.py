@@ -137,7 +137,7 @@ def hand_rank(hand):
         return 8
     elif three_of_kind(hand) and one_pair(hand):
         for i in range(len(card_rank)-2):
-            tem_p = card_rank[i+1] == card_rank[i+2]:
+            tem_p = card_rank[i+1] == card_rank[i+2]
             card_rank = []
             card_rank.append(tem_p)
             break
