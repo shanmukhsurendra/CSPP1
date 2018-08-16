@@ -117,6 +117,7 @@ def high_card(hand):
     for i in range(len(lis_new)):
         if lis_new[i] != lis_new[i+1] != lis_new[i+2] != lis_new[i+3] != lis_new[i+4]:
             return True
+        return False
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
