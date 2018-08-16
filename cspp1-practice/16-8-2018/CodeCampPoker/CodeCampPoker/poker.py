@@ -125,6 +125,7 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if four_of_kind(hand):
+        print(four_of_kind(hand))
         return 4
     if three_of_kind(hand):
         return 3
