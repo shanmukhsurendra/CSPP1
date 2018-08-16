@@ -78,7 +78,7 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     lis_new = []
-    list1_new=[]
+    #list1_new=[]
     j = 0
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
