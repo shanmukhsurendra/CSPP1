@@ -54,6 +54,17 @@ def four_of_kind(hand):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
             return True
 #     return False
+def full_house(hand):
+    lis_new = []
+    for h_h in hand:
+        lis_new.append(DICT_VALUES[h_h[0]])
+    lis_new.sort()
+    if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
+        return True
+    if lis_new[2] == lis_new[3] == lis_new[4] and lis_new[1] == lis_new[2]:
+        return True
+    return False
+
 def is_straight(hand):
 #     '''
 #         How do we find out if the given hand is a straight?
@@ -135,7 +146,7 @@ def hand_rank(hand):
          card_value = 9
     elif four_of_kind(hand):
         return 8
-    elif three_of_kind(hand) and one_pair(hand):
+    elif full_house(hand):
         for i in range(len(card_rank)-2):
             tem_p = card_rank[i+1] == card_rank[i+2]
             card_rank = []
