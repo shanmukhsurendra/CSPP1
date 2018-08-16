@@ -176,7 +176,7 @@ def hand_rank(hand):
         card_value = 2
     elif high_card(hand):
         card_value = 1
-    return (card_rank, card_rank_k)
+    return (card_value, card_rank_k)
     # return 0
 
 def poker(hands):
