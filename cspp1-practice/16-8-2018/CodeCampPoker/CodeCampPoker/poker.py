@@ -79,7 +79,7 @@ def is_straight(hand):
     '''
     lis_new = []
     #list1_new=[]
-    j = 0
+    #j = 0
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
