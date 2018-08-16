@@ -6,7 +6,7 @@
 
 DICT_VALUES = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4,\
 '5':5, '6':6, '7':7, '8':8, '9':9}
-def two_pair(hand):
+def one_pair(hand):
     '''
     one pair
     '''
@@ -18,7 +18,7 @@ def two_pair(hand):
     if len(lis_new) - len(s_s) == 1:
         return True
     return False
-def one_pair(hand):
+def two_pair(hand):
     '''
     twopair
     '''
