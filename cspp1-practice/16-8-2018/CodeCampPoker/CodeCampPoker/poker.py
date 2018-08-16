@@ -139,21 +139,21 @@ def hand_rank(hand):
     #hand = [h[1] for h in hand]
     card_value = 0
     tem_p = []
-    card_rank = ['--23456789TJQKA'.index(c) for c, s in hand]
-    card_rank.sort()
-    card_rank.reverse()
+    card_rank_k = ['--23456789TJQKA'.index(c) for c, s in hand]
+    card_rank_k.sort()
+    card_rank_k.reverse()
 
     if is_straight(hand) and is_flush(hand):
          card_value = 9
     elif four_of_kind(hand):
         card_value = 8
     elif full_house(hand):
-        for i in range(len(card_rank)-2):
+        for i in range(len(card_rank_k)-2):
             card_rank_k = []
-            if card_rank[i] == card_rank[i+1] == card_rank[i+2]:
-                tem_p = card_rank[i]
+            if card_rank_k[i] == card_rank_k[i+1] == card_rank_k[i+2]:
+                tem_p = card_rank_k[i]
                 card_rank_k.append(tem_p)
-                max(card_rank_k)
+                #max(card_rank_k)
             break
                 
         card_value = 7
@@ -167,8 +167,8 @@ def hand_rank(hand):
     elif two_pair(hand):
         card_value = 3
     elif one_pair(hand):
-        for i in range(len(card_rank)-1):
-            if card_rank[i] == card_rank[i+1]:
+        for i in range(len(card_rank_k)-1):
+            if card_rank_k[i] == card_rank_k[i+1]:
                 tem_p = card_rank[i]
                 card_rank_k = []
                 card_rank_k.append(tem_p)
