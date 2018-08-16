@@ -56,6 +56,9 @@ def four_of_kind(hand):
         return bool(lis_new[i+1] == lis_new[i+2] == lis_new[i+3] == lis_new[i+4])
 #     return False
 def full_house(hand):
+    '''
+    full house
+    '''
     lis_new = []
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
@@ -104,6 +107,9 @@ def is_flush(hand):
             return False
     return True
 def high_card(hand):
+    '''
+    high card
+    '''
     lis_new = []
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
