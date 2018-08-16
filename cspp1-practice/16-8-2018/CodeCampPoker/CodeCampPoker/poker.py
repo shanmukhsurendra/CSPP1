@@ -146,7 +146,7 @@ def hand_rank(hand):
     if is_straight(hand) and is_flush(hand):
          card_value = 9
     elif four_of_kind(hand):
-        return 8
+        card_value = 8
     elif full_house(hand):
         for i in range(len(card_rank)-2):
             if card_rank[i] == card_rank[i+1] == card_rank[i+2]:
