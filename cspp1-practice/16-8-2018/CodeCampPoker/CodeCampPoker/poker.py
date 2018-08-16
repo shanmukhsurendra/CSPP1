@@ -149,9 +149,9 @@ def hand_rank(hand):
         card_value = 8
     elif full_house(hand):
         for i in range(len(card_rank_k)-2):
-            card_rank_k = []
             if card_rank_k[i] == card_rank_k[i+1] == card_rank_k[i+2]:
                 tem_p = card_rank_k[i]
+                card_rank_k = []
                 card_rank_k.append(tem_p)
                 #max(card_rank_k)
             break
