@@ -91,6 +91,14 @@ def is_flush(hand):
         if suit[1] != h_h[1]:
             return False
     return True
+def high_card(hand):
+    lis_new = []
+    for h_h in hand:
+        lis_new.append(DICT_VALUES[h_h[0]])
+    lis_new.sort()
+    for i in range(len(lis_new)):
+        if lis_new[i] != lis_new[i+1] != lis_new[i+2] != lis_new[i+3] != lis_new[i+4]:
+            return True
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -117,25 +125,42 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     #hand = [DICT_VALUES[h[0]] for h in hand]
     #hand = [h[1] for h in hand]
+    card_value = 0
+    tem_p = []
+    card_rank = ['--23456789TJQKA'.index(c) for c, s in hand]
+    card_rank.sort()
+    card_rank.reverse()
+
     if is_straight(hand) and is_flush(hand):
-        return 9
-    elif three_of_kind(hand) and one_pair(hand):
-        return 7
-    elif is_flush(hand):
-        return 6
-    elif is_straight(hand):
-        return 5
+         card_value = 9
     elif four_of_kind(hand):
         return 8
+    elif three_of_kind(hand) and one_pair(hand):
+        for i in range(len(card_rank)-2):
+            tem_p = card_rank[i+1] == card_rank[i+2]:
+            card_rank = []
+            card_rank.append(tem_p)
+            break
+        card_value = 7
+    elif is_flush(hand):
+        card_value = 6
+    elif is_straight(hand):
+        card_value = 5
     #elif full_house(hand):
     elif three_of_kind(hand):
-        return 4
+        card_value = 4
     elif two_pair(hand):
-        return 3
+        card_value = 3
     elif one_pair(hand):
-        return 2
-    else:
-        return  1
+        for i in range(len(card_rank)-1):
+            if card_rank[i] == card_rank[i+1]:
+                tem_p = card_rank[i]
+                card_rank = []card_rank.append(tem_p)
+                break
+        card_value = 2
+    elif high_card(hand):
+        card_value = 1
+    return (card_value, card_rank)
     # return 0
 
 def poker(hands):
