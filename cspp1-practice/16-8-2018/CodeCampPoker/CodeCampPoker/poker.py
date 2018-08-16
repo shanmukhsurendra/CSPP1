@@ -53,30 +53,17 @@ def four_of_kind(hand):
     for i in range(len(lis_new)-3):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
             return True
-    return False
-def full_house(hand):
-    '''
-    full house
-    '''
-    lis_new = []
-    for h_h in hand:
-        lis_new.append(DICT_VALUES[h_h[0]])
-    lis_new.sort()
-    if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
-        return True
-    if lis_new[2] == lis_new[3] == lis_new[4] and lis_new[1] == lis_new[2]:
-        return True
-    return False
-def is_straight(hand):
-    '''
-        How do we find out if the given hand is a straight?
-        The hand has a list of cards represented as strings.
-        There are multiple ways of checking if the hand is a straight.
-        Do we need both the characters in the string? No.
-        The first character is good enough to determine a straight
-        Think of an algorithm: given the card face value how to check if it a straight
-        Write the code for it and return True if it is a straight else return False
-    '''
+#     return False
+# def is_straight(hand):
+#     '''
+#         How do we find out if the given hand is a straight?
+#         The hand has a list of cards represented as strings.
+#         There are multiple ways of checking if the hand is a straight.
+#         Do we need both the characters in the string? No.
+#         The first character is good enough to determine a straight
+#         Think of an algorithm: given the card face value how to check if it a straight
+#         Write the code for it and return True if it is a straight else return False
+#     '''
     lis_new = []
     #list1_new=[]
     #j = 0
@@ -132,7 +119,8 @@ def hand_rank(hand):
         return 9
     elif four_of_kind(hand):
         return 8
-    elif full_house(hand):
+    #elif full_house(hand):
+    elif three_of_kind(hand) and one_pair(hand)
         return 7
     elif is_flush(hand):
         return 6
