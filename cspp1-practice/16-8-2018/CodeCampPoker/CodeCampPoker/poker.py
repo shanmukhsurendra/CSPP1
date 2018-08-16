@@ -135,7 +135,6 @@ def hand_rank(hand):
     elif full_house(hand):
         return 7
     elif is_flush(hand):
-    	print 
         return 6
     elif is_straight(hand):
         return 5
