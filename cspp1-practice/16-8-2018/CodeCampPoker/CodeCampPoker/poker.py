@@ -150,7 +150,7 @@ def hand_rank(hand):
     card_rank_k.reverse()
 
     if is_straight(hand) and is_flush(hand):
-         card_value = 9
+        card_value = 9
     elif four_of_kind(hand):
         card_value = 8
     elif full_house(hand):
