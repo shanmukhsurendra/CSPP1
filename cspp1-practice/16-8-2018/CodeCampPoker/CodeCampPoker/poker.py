@@ -54,7 +54,7 @@ def four_of_kind(hand):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
             return True
 #     return False
-# def is_straight(hand):
+def is_straight(hand):
 #     '''
 #         How do we find out if the given hand is a straight?
 #         The hand has a list of cards represented as strings.
