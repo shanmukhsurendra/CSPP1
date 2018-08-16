@@ -50,9 +50,10 @@ def four_of_kind(hand):
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
-    for i in range(len(lis_new)-3):
-        if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
-            return True
+    for i in range(len(lis_new)):
+        if lis_new[i] == lis_new[i+1]:
+            return bool(lis_new[i+1] == lis_new[i+2] == lis_new[i+3])
+        return bool(lis_new[i+1] == lis_new[i+2] == lis_new[i+3] == lis_new[i+4])
 #     return False
 def full_house(hand):
     lis_new = []
