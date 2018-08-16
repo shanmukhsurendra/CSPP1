@@ -6,7 +6,7 @@
 
 DICT_VALUES = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4,\
 '5':5, '6':6, '7':7, '8':8, '9':9}
-def one_pair(hand):
+def two_pair(hand):
     '''
     one pair
     '''
@@ -18,7 +18,7 @@ def one_pair(hand):
     if len(lis_new) - len(s_s) == 1:
         return True
     return False
-def two_pair(hand):
+def one_pair(hand):
     '''
     twopair
     '''
@@ -78,11 +78,15 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     lis_new = []
+    list1_new=[]
+    j = 0
     for h_h in hand:
         lis_new.append(DICT_VALUES[h_h[0]])
     lis_new.sort()
     for i in range(len(lis_new)-1):
         if lis_new[i+1] - lis_new[i] != 1:
+            # list1_new[j] = lis_new
+            # j += 1
             return False
     return True
 
@@ -141,7 +145,7 @@ def hand_rank(hand):
     elif one_pair(hand):
         return 2
     else:
-    	return 1
+    	return  1
     # return 0
 
 def poker(hands):
