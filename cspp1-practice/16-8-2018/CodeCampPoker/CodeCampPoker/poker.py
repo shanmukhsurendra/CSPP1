@@ -169,7 +169,7 @@ def hand_rank(hand):
     elif one_pair(hand):
         for i in range(len(card_rank_k)-1):
             if card_rank_k[i] == card_rank_k[i+1]:
-                tem_p = card_rank[i]
+                tem_p = card_rank_k[i]
                 card_rank_k = []
                 card_rank_k.append(tem_p)
                 break
