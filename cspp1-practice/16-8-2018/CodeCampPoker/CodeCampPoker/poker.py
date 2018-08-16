@@ -54,19 +54,19 @@ def four_of_kind(hand):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
             return True
     return False
-# def full_house(hand):
-#     '''
-#     full house
-#     '''
-#     lis_new = []
-#     for h_h in hand:
-#         lis_new.append(DICT_VALUES[h_h[0]])
-#     lis_new.sort()
-#     if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
-#         return True
-#     if lis_new[2] == lis_new[3] == lis_new[4] and lis_new[1] == lis_new[2]:
-#         return True
-#     return False
+def full_house(hand):
+    '''
+    full house
+    '''
+    lis_new = []
+    for h_h in hand:
+        lis_new.append(DICT_VALUES[h_h[0]])
+    lis_new.sort()
+    if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
+        return True
+    if lis_new[2] == lis_new[3] == lis_new[4] and lis_new[1] == lis_new[2]:
+        return True
+    return False
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -130,13 +130,14 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
         return 9
-    elif three_of_kind(hand) and one_pair(hand):
-        return 8
-    elif is_flush(hand):
-        return 7
-    elif is_straight(hand):
-        return 6
     elif four_of_kind(hand):
+        return 8
+    elif full_house(hand):
+        return 7
+    elif is_flush(hand):
+    	print 
+        return 6
+    elif is_straight(hand):
         return 5
     elif three_of_kind(hand):
         return 4
