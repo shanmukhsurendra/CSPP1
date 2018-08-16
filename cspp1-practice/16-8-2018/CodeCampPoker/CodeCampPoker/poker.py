@@ -153,7 +153,9 @@ def hand_rank(hand):
             if card_rank[i] == card_rank[i+1] == card_rank[i+2]:
                 tem_p = card_rank[i]
                 card_rank_k.append(tem_p)
+                max(card_rank_k)
             break
+                
         card_value = 7
     elif is_flush(hand):
         card_value = 6
@@ -174,7 +176,7 @@ def hand_rank(hand):
         card_value = 2
     elif high_card(hand):
         card_value = 1
-    return (card_value, card_rank)
+    return (card_rank, card_rank_k)
     # return 0
 
 def poker(hands):
