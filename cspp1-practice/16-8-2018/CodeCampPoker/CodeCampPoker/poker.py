@@ -149,10 +149,10 @@ def hand_rank(hand):
         card_value = 8
     elif full_house(hand):
         for i in range(len(card_rank)-2):
+                card_rank_k = []
             if card_rank[i] == card_rank[i+1] == card_rank[i+2]:
                 tem_p = card_rank[i]
-                card_rank = []
-                card_rank.append(tem_p)
+                card_rank_k.append(tem_p)
             break
         card_value = 7
     elif is_flush(hand):
