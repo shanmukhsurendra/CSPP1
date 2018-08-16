@@ -62,7 +62,7 @@ def full_house(hand):
     lis_new.sort()
     if lis_new[0] == lis_new[1] == lis_new[2] and lis_new[3] == lis_new[4]:
         return True
-    if lis_new[2] == lis_new[3] == lis_new[4] and lis_new[1] == lis_new[2]:
+    if lis_new[2] == lis_new[3] == lis_new[4] and lis_new[0] == lis_new[1]:
         return True
     return False
 
