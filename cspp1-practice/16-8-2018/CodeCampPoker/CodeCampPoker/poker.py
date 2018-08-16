@@ -170,8 +170,8 @@ def hand_rank(hand):
         for i in range(len(card_rank)-1):
             if card_rank[i] == card_rank[i+1]:
                 tem_p = card_rank[i]
-                card_rank = []
-                card_rank.append(tem_p)
+                card_rank_k = []
+                card_rank_k.append(tem_p)
                 break
         card_value = 2
     elif high_card(hand):
