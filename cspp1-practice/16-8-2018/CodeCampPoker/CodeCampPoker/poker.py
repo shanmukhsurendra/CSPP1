@@ -70,15 +70,15 @@ def full_house(hand):
     return False
 
 def is_straight(hand):
-#     '''
-#         How do we find out if the given hand is a straight?
-#         The hand has a list of cards represented as strings.
-#         There are multiple ways of checking if the hand is a straight.
-#         Do we need both the characters in the string? No.
-#         The first character is good enough to determine a straight
-#         Think of an algorithm: given the card face value how to check if it a straight
-#         Write the code for it and return True if it is a straight else return False
-#     '''
+    '''
+        How do we find out if the given hand is a straight?
+        The hand has a list of cards represented as strings.
+        There are multiple ways of checking if the hand is a straight.
+        Do we need both the characters in the string? No.
+        The first character is good enough to determine a straight
+        Think of an algorithm: given the card face value how to check if it a straight
+        Write the code for it and return True if it is a straight else return False
+    '''
     lis_new = []
     #list1_new=[]
     #j = 0
