@@ -47,10 +47,10 @@ def four_of_kind(hand):
     four of kind
     '''
     lis_new = []
-    lis_new = hand.sorted()
-    # for h_h in hand:
-    #     lis_new.append(DICT_VALUES[h_h[0]])
-    # lis_new.sort()
+    # lis_new = hand.sorted()
+    for h_h in hand:
+        lis_new.append(DICT_VALUES[h_h[0]])
+    lis_new.sort()
     for i in range(len(lis_new)-3):
         if lis_new[i] == lis_new[i+1] == lis_new[i+2] == lis_new[i+3]:
             return True
