@@ -36,10 +36,10 @@ def similarity(dict1, dict2):
     stop_words = load_stopwords("stopwords.txt")
     #print(stop_words)
     for i in input1_list:
-        if i not in stop_words:
+        if i not in stop_words and len(i) > 0:
             lis_t.append(i)
     for i in input2_list:
-        if i not in stop_words:
+        if i not in stop_words and len(i) > 0:
             lis2_t.append(i)
     word_freq = get_frequency(lis_t, lis2_t)
     number = 0
