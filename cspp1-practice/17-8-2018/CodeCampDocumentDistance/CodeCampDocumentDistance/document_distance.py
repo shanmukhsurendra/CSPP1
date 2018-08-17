@@ -3,13 +3,13 @@
 '''
 import re
 import math
-def get_frequency(lis_t, lis2_t):
+def get_frequency(input1_list, lis2_t):
     '''
     in this function we compare the variable in bot lists
     and update the values in dictionaries
     '''
     freq_dict = {}
-    for i in lis_t:
+    for i in input1_list:
         if i in freq_dict:
             freq_dict[i][0] += 1
         else:
@@ -28,7 +28,7 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     stop_words = {}
-    lis_t = []
+    input1_list = []
     lis2_t = []
     input1_list = ((re.sub(r'[^\w\s]','', dict1)).lower()).split()
     input2_list = ((re.sub(r'[^\w\s]','', dict2)).lower()).split()
@@ -37,11 +37,11 @@ def similarity(dict1, dict2):
     #print(stop_words)
     for i in input1_list:
         if i not in stop_words:
-            lis_t.append(i)
+            input1_list.append(i)
     for i in input2_list:
         if i not in stop_words:
             lis2_t.append(i)
-    word_freq = get_frequency(lis_t, lis2_t)
+    word_freq = get_frequency(input1_list, lis2_t)
     number = 0
     d_1d = 0
     d_2d = 0
