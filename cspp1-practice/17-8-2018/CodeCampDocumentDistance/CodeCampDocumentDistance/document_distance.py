@@ -30,7 +30,7 @@ def similarity(dict1, dict2):
     input2_list = ((re.sub(r'[^\w\s]','', dict2)).lower()).split()
     #print(input1_list)
     stop_words = load_stopwords("stopwords.txt")
-    print(stop_words)
+    #print(stop_words)
     for i in input1_list:
     	if i not in stop_words:
     		lis_t.append(i)
