@@ -10,13 +10,13 @@ def get_frequency(lis_t, lis2_t):
     '''
     freq_dict = {}
     for i in lis_t:
-        if i in freq_dict and len(i) > 0 :
+        if i in freq_dict:
             freq_dict[i][0] += 1
         else:
             freq_dict[i] = [1]
         freq_dict[i].append(0)
     for i in lis2_t:
-        if i in freq_dict and len(i) > 0:
+        if i in freq_dict:
             freq_dict[i][1] += 1
         else:
             freq_dict[i] = [0, 1]
@@ -49,7 +49,7 @@ def similarity(dict1, dict2):
         number += word_freq[k][0]*word_freq[k][1]
         d_1d += word_freq[k][0]**2
         d_2d += word_freq[k][1]**2
-    return abs((number/ (math.sqrt(d_1d) * math.sqrt(d_2d))))
+    return (number/ (math.sqrt(d_1d) * math.sqrt(d_2d)))
 
 def load_stopwords(filename):
     '''
