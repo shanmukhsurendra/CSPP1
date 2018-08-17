@@ -9,7 +9,7 @@ def similarity(dict1, dict2):
     stop_words = {}
     input1_dict = ((re.sub(r'[^\w\s]','', dict1)).lower()).split()
     input2_dict = ((re.sub(r'[^\w\s]','', dict2)).lower()).split()
-   # print(input1_dict)
+    #print(input1_dict)
    stop_words = load_stopwords("stopwords.txt")
 def load_stopwords(filename):
     '''
