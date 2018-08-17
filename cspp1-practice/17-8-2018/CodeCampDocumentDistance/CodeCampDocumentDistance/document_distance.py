@@ -42,11 +42,11 @@ def similarity(dict1, dict2):
         if i not in stop_words and i not in '1234567890':
             lis2_t.append(i)
     word_freq = get_frequency(lis_t, lis2_t)
-    number = 0
+    #number = 0
     d_1d = 0
     d_2d = 0
     for k in word_freq:
-        number += word_freq[k][0]*word_freq[k][1]
+        number = sum(word_freq[k][0]*word_freq[k][1])
         d_1d += word_freq[k][0]**2
         d_2d += word_freq[k][1]**2
     return number/ (math.sqrt(d_1d) * math.sqrt(d_2d))
