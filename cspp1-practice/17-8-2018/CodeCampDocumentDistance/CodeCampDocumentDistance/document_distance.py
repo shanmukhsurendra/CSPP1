@@ -49,7 +49,7 @@ def similarity(dict1, dict2):
         number += word_freq[k][0]*word_freq[k][1]
         d_1d += word_freq[k][0]**2
         d_2d += word_freq[k][1]**2
-    return (number/ (math.sqrt(d_1d) * math.sqrt(d_2d)))
+    return number/ (math.sqrt(d_1d) * math.sqrt(d_2d))
 
 def load_stopwords(filename):
     '''
