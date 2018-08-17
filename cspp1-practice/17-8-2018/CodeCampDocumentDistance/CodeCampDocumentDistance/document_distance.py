@@ -32,24 +32,24 @@ def similarity(dict1, dict2):
     lis2_t = []
     input1_list = ((re.sub(r'[^\w\s]','', dict1)).lower()).split()
     input2_list = ((re.sub(r'[^\w\s]','', dict2)).lower()).split()
-    #print(input1_list)
-    stop_words = load_stopwords("stopwords.txt")
-    #print(stop_words)
-    for i in input1_list:
-        if i not in stop_words and len(i) > 0:
-            lis_t.append(i)
-    for i in input2_list:
-        if i not in stop_words and len(i) > 0:
-            lis2_t.append(i)
-    word_freq = get_frequency(lis_t, lis2_t)
-    number = 0
-    d_1d = 0
-    d_2d = 0
-    for k in word_freq:
-        number += word_freq[k][0]*word_freq[k][1]
-        d_1d += word_freq[k][0]**2
-        d_2d += word_freq[k][1]**2
-    return (number/ (math.sqrt(d_1d) * math.sqrt(d_2d)))
+    print(input1_list)
+    # stop_words = load_stopwords("stopwords.txt")
+    print(stop_words)
+    # for i in input1_list:
+    #     if i not in stop_words:
+    #         lis_t.append(i)
+    # for i in input2_list:
+    #     if i not in stop_words:
+    #         lis2_t.append(i)
+    # word_freq = get_frequency(lis_t, lis2_t)
+    # number = 0
+    # d_1d = 0
+    # d_2d = 0
+    # for k in word_freq:
+    #     number += word_freq[k][0]*word_freq[k][1]
+    #     d_1d += word_freq[k][0]**2
+    #     d_2d += word_freq[k][1]**2
+    # return (number/ (math.sqrt(d_1d) * math.sqrt(d_2d)))
 
 def load_stopwords(filename):
     '''
