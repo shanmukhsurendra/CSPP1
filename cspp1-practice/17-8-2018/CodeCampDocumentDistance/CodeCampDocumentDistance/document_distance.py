@@ -11,14 +11,17 @@ def similarity(dict1, dict2):
     input2_dict = ((re.sub(r'[^\w\s]','', dict2)).lower()).split()
     #print(input1_dict)
     stop_words = load_stopwords("stopwords.txt")
+    print(stopwords)
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
+    j = 0
     stopwords = {}
     with open(filename, 'r') as filename:
         for line in filename:
-            stopwords[line.strip()] = 0
+            stopwords[line.strip()] = j
+            j += 1
     return stopwords
 
 def main():
