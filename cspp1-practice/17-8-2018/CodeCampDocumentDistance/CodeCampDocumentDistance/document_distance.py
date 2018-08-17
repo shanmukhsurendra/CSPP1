@@ -10,13 +10,13 @@ def get_frequency(lis_t, lis2_t):
     '''
     freq_dict = {}
     for i in lis_t:
-        if i in freq_dict:
+        if i in freq_dict and len(i) > 0 :
             freq_dict[i][0] += 1
         else:
             freq_dict[i] = [1]
         freq_dict[i].append(0)
     for i in lis2_t:
-        if i in freq_dict:
+        if i in freq_dict and len(i) > 0:
             freq_dict[i][1] += 1
         else:
             freq_dict[i] = [0, 1]
