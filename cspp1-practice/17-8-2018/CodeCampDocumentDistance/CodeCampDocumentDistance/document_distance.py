@@ -4,6 +4,10 @@
 import re
 import math
 def get_frequency(lis_t, lis2_t):
+    '''
+    in this function we compare the variable in bot lists
+    and update the values in dictionaries
+    '''
     freq_dict = {}
     for i in lis_t:
         if i in freq_dict:
