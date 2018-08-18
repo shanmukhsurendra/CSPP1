@@ -22,6 +22,7 @@
 '''
 
 # helper function to load the stop words from a file
+import re
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -39,7 +40,10 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    return text
+    input1_list = ((re.sub(r'[^\w\s]', '', text)).lower()).split()
+    print(input1_list)
+
+    
     # stop_words = {}
     # stop_words = load_stopwords("stopwords.txt")
     # lis_t = []
