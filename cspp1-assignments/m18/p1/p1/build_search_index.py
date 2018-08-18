@@ -70,8 +70,12 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    dict_empty = {}
     print(docs)
+    dict_empty = {}
+    doc_id = []
+    for i in docs:
+        doc_id.append(text.index(i))
+    print(doc_id)
 
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
@@ -108,8 +112,8 @@ def main():
         documents.append(input())
         i += 1
     # call print to display the search index
-    word_list(documents)
-    #print_search_index(build_search_index(word_list(documents)))
+    #word_list(documents)
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
