@@ -46,6 +46,7 @@ def word_list(text):
     for i in input1_list:
         if i not in stop_words and i not in '1234567890':
             lis_t.append(i)
+    print(lis_t)
 
     
     # stop_words = {}
@@ -107,8 +108,8 @@ def main():
         documents.append(input())
         i += 1
     # call print to display the search index
-    #build_search_index(documents)
-    print_search_index(build_search_index(word_list(documents)))
+    word_list(documents)
+    #print_search_index(build_search_index(word_list(documents)))
 
 if __name__ == '__main__':
     main()
