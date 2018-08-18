@@ -75,7 +75,7 @@ def build_search_index(docs):
     # dict_empty = {}
     doc_new = []
     doc_id = []
-    doc_new = docs.split()
+    doc_new = docs[0].split(" ")
     for i in docs:
         doc_id.append(docs.index(i))
     print(doc_id)
