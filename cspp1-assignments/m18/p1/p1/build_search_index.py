@@ -41,14 +41,15 @@ def word_list(text):
     '''
     #print(text)
     # stop_words = {}
-    # lis_t = []
+    lis_t = []
     # lis2_t = []
     input1_list = ((re.sub(r'[^\w\s]', '', text)).lower()).split()
-    print(input1_list)
+    #print(input1_list)
     # input2_list = ((re.sub(r'[^\w\s]', '', dict2)).lower()).split()
-    # for i in input1_list:
-    #     if i not in stop_words and i not in '1234567890':
-    #         lis_t.append(i)
+    for i in input1_list:
+        if i not in stop_words and i not in '1234567890':
+            lis_t.append(i)
+    print(lis_t)
     # for i in input2_list:
     #     if i not in stop_words and i not in '1234567890':
     #         lis2_t.append(i)
