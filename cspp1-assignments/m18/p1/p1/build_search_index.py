@@ -73,8 +73,9 @@ def build_search_index(docs):
     # input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
     # print(input1_list)
     # dict_empty = {}
-    # doc_id = []
-    docs.split()
+    doc_new = []
+    doc_id = []
+    doc_new = docs.split()
     for i in docs:
         doc_id.append(docs.index(i))
     print(doc_id)
