@@ -70,7 +70,8 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    print(docs)
+    input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
+    print(input1_list)
     dict_empty = {}
     doc_id = []
     for i in docs:
