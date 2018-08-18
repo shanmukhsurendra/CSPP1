@@ -41,6 +41,7 @@ def word_list(text):
     '''
     #print(text)
     # stop_words = {}
+    stopwords = load_stopwords("stopwords.txt")
     lis_t = []
     # lis2_t = []
     input1_list = ((re.sub(r'[^\w\s]', '', text)).lower()).split()
