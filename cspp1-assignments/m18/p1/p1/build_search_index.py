@@ -39,7 +39,19 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    pass
+    print(text)
+    # stop_words = {}
+    # lis_t = []
+    # lis2_t = []
+    # input1_list = ((re.sub(r'[^\w\s]', '', dict1)).lower()).split()
+    # input2_list = ((re.sub(r'[^\w\s]', '', dict2)).lower()).split()
+    # for i in input1_list:
+    #     if i not in stop_words and i not in '1234567890':
+    #         lis_t.append(i)
+    # for i in input2_list:
+    #     if i not in stop_words and i not in '1234567890':
+    #         lis2_t.append(i)
+    # print(lis_t)
 
 def build_search_index(docs):
     '''
@@ -82,6 +94,7 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
+    print(documents)
 
     # call print to display the search index
     print_search_index(build_search_index(documents))
