@@ -23,6 +23,7 @@
 
 # helper function to load the stop words from a file
 import re
+FILENAME = "stopwords.txt"
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -34,18 +35,21 @@ def load_stopwords(filename):
     return stopwords
 
 
-def word_list(text):
+def word_list(docs):
     '''
         Change case to lower and split the words using a SPACE
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
     lis_t = []
-    input1_list = ((re.sub(r'[^\w\s]', '', text)).lower()).split()
-    print(input1_list)
-    for i in input1_list:
-        if i not in stop_words and i not in '1234567890':
-            lis_t.append(i)
+    # docs = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
+    # # print(input1_list)
+    # for i in docs:
+    #     for word in i:
+    #         if i not in stop_words and i not in '1234567890':
+    #             lis_t.append(i)
+    for i in range(len(docs)):
+        lis_t.append((docs[i].lower()).strip())
     
 
     
@@ -70,8 +74,8 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
-    print(input1_list[0])
+    #input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
+    #print(input1_list[0])
     # dict_empty = {}
     # doc_new = []
     # doc_id = []
@@ -88,7 +92,15 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    pass
+    search_index = {}
+    for index,word in enumerate(lis_t):
+        if word in search_index.key():
+            search_index[word].append(index)
+        else:
+            search_index[word] = [index]
+    return search_index
+
+
 
 # helper function to print the search index
 # use this to verify how the search index looks
