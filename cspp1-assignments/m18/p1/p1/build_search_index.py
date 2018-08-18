@@ -46,7 +46,7 @@ def word_list(text):
     for i in input1_list:
         if i not in stop_words and i not in '1234567890':
             lis_t.append(i)
-    print(lis_t)
+    
 
     
     # stop_words = {}
@@ -70,13 +70,11 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    # input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
-    # print(input1_list)
+    input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
+    print(input1_list)
     # dict_empty = {}
-    doc_new = []
-    doc_id = []
-    doc_new = (k.lower() for k in docs[0])
-    print(doc_new)
+    # doc_new = []
+    # doc_id = []
     # for i in doc_new:
     #     doc_id.append(doc_new.index(i))
     # print(doc_id)
