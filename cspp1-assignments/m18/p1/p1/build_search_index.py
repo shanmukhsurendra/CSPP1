@@ -77,9 +77,9 @@ def build_search_index(docs):
     doc_id = []
     doc_new = (k.lower() for k in docs[0])
     print(doc_new)
-    for i in doc_new:
-        doc_id.append(doc_new.index(i))
-    print(doc_id)
+    # for i in doc_new:
+    #     doc_id.append(doc_new.index(i))
+    # print(doc_id)
 
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
