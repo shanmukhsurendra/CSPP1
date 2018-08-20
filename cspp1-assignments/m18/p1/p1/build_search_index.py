@@ -70,7 +70,7 @@ def word_list(docs):
     # print(lis_t)
     '''
     input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
-    return input1_list
+    print(input1_list)
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
