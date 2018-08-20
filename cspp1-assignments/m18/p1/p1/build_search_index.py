@@ -96,7 +96,7 @@ def build_search_index(docs):
 
     # return search index
     search_index = {}
-    for index,word in enumerate(lis_t):
+    for index,word in enumerate(docs):
         if word in search_index.key():
             search_index[word].append(index)
         else:
