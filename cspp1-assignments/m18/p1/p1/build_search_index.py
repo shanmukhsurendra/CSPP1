@@ -41,6 +41,7 @@ def word_list(docs):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
+    '''
     lis_t = []
     # docs = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
     # # print(input1_list)
@@ -67,14 +68,16 @@ def word_list(docs):
     #     if i not in stop_words and i not in '1234567890':
     #         lis2_t.append(i)
     # print(lis_t)
-
+    '''
+    input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
+    return input1_list
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
 
     # initialize a search index (an empty dictionary)
-    #input1_list = ((re.sub(r'[^\w\s]', '', docs)).lower()).split()
+    
     #print(input1_list[0])
     # dict_empty = {}
     # doc_new = []
