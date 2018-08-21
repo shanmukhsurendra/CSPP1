@@ -1,5 +1,6 @@
 from ps4a import *
 import time
+HAND_SIZE = 7
 
 
 #
@@ -125,7 +126,35 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
+    # <-- Remove this when you code this function
+    hand = None
+    while True:
+        user_input = input("choose n(play with new hnad) (or) choose r(play with the last hand ) (or) choose e(exit the game)")
+        if user_input == 'n':
+            hand = dealHand(HAND_SIZE)
+            # playHand(hand, wordList, HAND_SIZE)
+        elif user_input == 'r':
+            if hand == None:
+                print("you havent played yet")
+                user_input = input("choose n(play with new hnad) (or) choose r(play with the last hand ) (or) choose e(exit the game)")
+
+
+            playHand(hand, wordList, HAND_SIZE)
+        elif user_input == "e":
+            break
+        else:
+            print("enter valid string")
+        com_input = input("enter u or c")
+        if com_input != 'u' and com_input != 'c':
+            print("enter valid string")
+        if com_input == 'u':
+            playHand(hand, wordList, HAND_SIZE)
+        # if com_input = 'c':
+        else:
+            compPlayHand(hand, wordList, HAND_SIZE)
+        # user_input = input("choose n(play with new hnad) (or) choose r(play with the last hand ) (or) choose e(exit the game)")
+
+
 
         
 #
