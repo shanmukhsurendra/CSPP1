@@ -132,26 +132,41 @@ def playGame(wordList):
         user_input = input("choose n(play with new hnad) (or) choose r(play with the last hand ) (or) choose e(exit the game)")
         if user_input == 'n':
             hand = dealHand(HAND_SIZE)
+            com_input = input("enter u or c")
+            if com_input != 'u' and com_input != 'c':
+                print("enter valid string")
+            if com_input == 'u':
+                playHand(hand, wordList, HAND_SIZE)
+            # if com_input = 'c':
+            else:
+                compPlayHand(hand, wordList, HAND_SIZE)
             # playHand(hand, wordList, HAND_SIZE)
         elif user_input == 'r':
             if hand == None:
                 print("you havent played yet")
-                user_input = input("choose n(play with new hnad) (or) choose r(play with the last hand ) (or) choose e(exit the game)")
+                user_input = input("choose n(play with new hnad) (or) choose r(play with the  last hand ) (or) choose e(exit the game)")
+            com_input = input("enter u or c")
+            if com_input != 'u' and com_input != 'c':
+                print("enter valid string")
+            if com_input == 'u':
+                playHand(hand, wordList, HAND_SIZE)
+            # if com_input = 'c':
+            else:
+                compPlayHand(hand, wordList, HAND_SIZE)    
 
-
-            playHand(hand, wordList, HAND_SIZE)
+            # playHand(hand, wordList, HAND_SIZE)
         elif user_input == "e":
             break
         else:
             print("enter valid string")
-        com_input = input("enter u or c")
-        if com_input != 'u' and com_input != 'c':
-            print("enter valid string")
-        if com_input == 'u':
-            playHand(hand, wordList, HAND_SIZE)
-        # if com_input = 'c':
-        else:
-            compPlayHand(hand, wordList, HAND_SIZE)
+        # com_input = input("enter u or c")
+        # if com_input != 'u' and com_input != 'c':
+        #     print("enter valid string")
+        # if com_input == 'u':
+        #     playHand(hand, wordList, HAND_SIZE)
+        # # if com_input = 'c':
+        # else:
+        #     compPlayHand(hand, wordList, HAND_SIZE)
         # user_input = input("choose n(play with new hnad) (or) choose r(play with the last hand ) (or) choose e(exit the game)")
 
 
