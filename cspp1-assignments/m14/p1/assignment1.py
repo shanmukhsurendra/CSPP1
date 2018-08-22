@@ -151,7 +151,6 @@ class Message(object):
             else:
                 new_msg.append(self.build_shift_dict(shift)[i])
         return ''.join(new_msg)
-        
 
 def main():
     '''
