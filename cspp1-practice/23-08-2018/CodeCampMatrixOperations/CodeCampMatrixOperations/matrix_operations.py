@@ -21,12 +21,8 @@ def mult_matrix(m1, m2):
         for j in range(len(m2[0])):
             for k in range(len(m2)):
                 grid[i][j]  += int(m1[i][k]) * int(m2[k][j])
-                # b_new.append(a_new)
-        
+
     return grid
-
-        
-
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
@@ -46,7 +42,7 @@ def add_matrix(m1, m2):
         return (l_new)
     else:
         print("Error: Matrix shapes invalid for addition")
-        return 
+        return None
 # except:
     #     return print("Error: Invalid input for the matrix")
     
