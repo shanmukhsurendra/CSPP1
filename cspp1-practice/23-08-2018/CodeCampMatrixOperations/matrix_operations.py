@@ -17,7 +17,7 @@ def mult_matrix(m1, m2):
         for j in range(len(m2[0])):
             for k in range(len(m2)):
                 grid[i][j] += m1[i][k] * m2[k][j]
-            print(grid)
+    return grid
 
 def add_matrix(m1, m2):
     '''
@@ -60,6 +60,7 @@ def main():
     # print(read_m)
     # print(read2_m)
     print(add_matrix(read_m, read2_m))
+    print(mult_matrix(read_m, read2_m))
     # read matrix 2
 
     # add matrix 1 and matrix 2
