@@ -14,7 +14,9 @@ def mult_matrix(m1, m2):
     #         l_new.append(a)
     if len(m1) != len(m2[0]):
         print("Error: Matrix shapes invalid for mult")
-        return   
+        return
+    a_new = []
+   
     c_new = []
     grid = [[0]*len(m1)]*len(m2[0])
     for i in range(len(m1)):
