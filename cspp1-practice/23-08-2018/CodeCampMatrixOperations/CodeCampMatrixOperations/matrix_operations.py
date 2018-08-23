@@ -37,7 +37,7 @@ def add_matrix(ma_m, ma_mm):
     l_new = []
     # try:
     if len(ma_m[0]) == len(ma_mm[0]):
-        for i in range(len(ma_m)):
+        for i in enumerate(ma_m):
             a_new = []
             for j in range(len(ma_mm[0])):
                 a_new.append(int(ma_m[i][j])+int(ma_mm[i][j]))
