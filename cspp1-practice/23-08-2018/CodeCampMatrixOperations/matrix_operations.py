@@ -19,7 +19,7 @@ def mult_matrix(m1, m2):
                 for k in range(len(m2)):
                     grid[i][j] += int(m1[i][k]) * int(m2[k][j])
     else:
-        print("matrix not match")
+        print("Error: Matrix shapes invalid for mult")
 
 def add_matrix(m1, m2):
     '''
