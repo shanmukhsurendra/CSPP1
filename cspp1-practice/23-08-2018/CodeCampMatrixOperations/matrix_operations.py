@@ -23,7 +23,7 @@ def mult_matrix(m1, m2):
                 grid[i][j]= int(m1[i][k]) * int(m2[k][j])
                 # b_new.append(a_new)
         
-    return c_new
+    return grid
 
         
 
