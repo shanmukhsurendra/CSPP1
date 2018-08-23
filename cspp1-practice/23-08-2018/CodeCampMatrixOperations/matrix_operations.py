@@ -20,6 +20,7 @@ def mult_matrix(m1, m2):
                     grid[i][j] += int(m1[i][k]) * int(m2[k][j])
     else:
         print("Error: Matrix shapes invalid for mult")
+    return grid
 
 def add_matrix(m1, m2):
     '''
