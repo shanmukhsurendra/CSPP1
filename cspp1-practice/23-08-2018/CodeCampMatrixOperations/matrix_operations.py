@@ -46,7 +46,7 @@ def add_matrix(m1, m2):
         return (l_new)
     else:
         print("Error: Matrix shapes invalid for addition")
-        print("None")
+        return 
 # except:
     #     return print("Error: Invalid input for the matrix")
     
