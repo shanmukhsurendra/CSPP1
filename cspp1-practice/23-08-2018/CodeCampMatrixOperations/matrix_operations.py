@@ -43,12 +43,13 @@ def add_matrix(m1, m2):
             for j in range(len(m2[0])):
                 a_new.append(int(m1[i][j])+int(m2[i][j]))
             l_new.append(a_new)
+        return (l_new)
     else:
         print("Error: Matrix shapes invalid for addition")
         print("None")
 # except:
     #     return print("Error: Invalid input for the matrix")
-    return (l_new)
+    
 def read_matrix():
     '''
     read the matrix dimensions from input
