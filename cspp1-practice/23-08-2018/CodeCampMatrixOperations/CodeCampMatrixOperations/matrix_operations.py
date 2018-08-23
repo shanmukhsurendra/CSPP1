@@ -65,16 +65,17 @@ def read_matrix():
         li_matrix = input().split()
         if columns == len(li_matrix):
             lis_t.append([int(i) for i in li_matrix])
+        return lis_t
         else:
             print("Error: Invalid input for the matrix")
-    return lis_t
+            return None
 def main():
     read_m = read_matrix()
     if read_m is None:
         exit()
     read2_m = read_matrix()
     if read2_m is None:
-        exit()
+        exit
     # print(read_m)
     # print(read2_m)
     print(add_matrix(read_m, read2_m))
