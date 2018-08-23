@@ -48,13 +48,12 @@ def main():
     read2_m = read_matrix()
     # print(read_m)
     # print(read2_m)
-    return add_matrix(read_m, read2_m)
+    print(add_matrix(read_m, read2_m))
     # read matrix 2
 
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    pass
 
 if __name__ == '__main__':
     main()
