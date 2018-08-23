@@ -12,14 +12,14 @@ def mult_matrix(m1, m2):
     #         for j in range(len(m2)):
     #             a += m1[i][j]*m2[j][i]
     #         l_new.append(a)
-    grid = [[0]*len(m1)]*len(m2[0])
-    for i in range(len(m1)):
-        for j in range(len(m2[0])):
-            for k in range(len(m2)):
-                grid[i][j] += int(m1[i][k]) * int(m2[k][j])
-
-    for  r in grid:
-        print(r) 
+    if len(m1[0]) == len(m2):
+        grid = [[0]*len(m1)]*len(m2[0])
+        for i in range(len(m1)):
+            for j in range(len(m2[0])):
+                for k in range(len(m2)):
+                    grid[i][j] += int(m1[i][k]) * int(m2[k][j])
+    else:
+        print("matrix not match")
 
 def add_matrix(m1, m2):
     '''
