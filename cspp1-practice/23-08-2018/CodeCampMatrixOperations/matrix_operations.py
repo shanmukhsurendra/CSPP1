@@ -25,8 +25,8 @@ def mult_matrix(m1, m2):
         for j in range(len(m2[0])):
             for k in range(len(m2)):
                 a_new += (m1[i][k]) * int(m2[k][j])
-                b_new.append(a_new)
-        c_new.append(b_new)
+                # b_new.append(a_new)
+        c_new.append(a_new)
     return c_new
 
         
