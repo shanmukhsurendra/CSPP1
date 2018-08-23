@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2):
+def mult_matrix(ma_m, ma_mm):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -7,23 +7,23 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     # l_new = []
-    # if len(m1[0]) == len(m2):
-    #     for i in range(len(m1)):
-    #         for j in range(len(m2)):
-    #             a += m1[i][j]*m2[j][i]
+    # if len(ma_m[0]) == len(ma_mm):
+    #     for i in range(len(ma_m)):
+    #         for j in range(len(ma_mm)):
+    #             a += ma_m[i][j]*ma_mm[j][i]
     #         l_new.append(a)
-    if len(m1) != len(m2[0]):
+    if len(ma_m) != len(ma_mm[0]):
         print("Error: Matrix shapes invalid for mult")
         return
      
-    grid = [[0 for i in range(len(m1))] for j in range(len(m2[0]))]
-    for i in range(len(m1)):
-        for j in range(len(m2[0])):
-            for k in range(len(m2)):
-                grid[i][j]  += int(m1[i][k]) * int(m2[k][j])
+    grid = [[0 for i in range(len(ma_m))] for j in range(len(ma_mm[0]))]
+    for i in range(len(ma_m)):
+        for j in range(len(ma_mm[0])):
+            for k in range(len(ma_mm)):
+                grid[i][j]  += int(ma_m[i][k]) * int(ma_mm[k][j])
 
     return grid
-def add_matrix(m1, m2):
+def add_matrix(ma_m, ma_mm):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -33,11 +33,11 @@ def add_matrix(m1, m2):
     '''
     l_new = []
     # try:
-    if len(m1[0]) == len(m2[0]):
-        for i in range(len(m1)):
+    if len(ma_m[0]) == len(ma_mm[0]):
+        for i in range(len(ma_m)):
             a_new = []
-            for j in range(len(m2[0])):
-                a_new.append(int(m1[i][j])+int(m2[i][j]))
+            for j in range(len(ma_mm[0])):
+                a_new.append(int(ma_m[i][j])+int(ma_mm[i][j]))
             l_new.append(a_new)
         return (l_new)
     else:
