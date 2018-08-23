@@ -1,3 +1,6 @@
+'''
+docstring
+'''
 def mult_matrix(ma_m, ma_mm):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -16,11 +19,11 @@ def mult_matrix(ma_m, ma_mm):
         print("Error: Matrix shapes invalid for mult")
         return
      
-    grid = [[0 for i in range(len(ma_m))] for j in range(len(ma_mm[0]))]
+    grid = [[0 for i in enumerate(ma_m)] for j in enumerate(ma_mm[0])]
     for i in range(len(ma_m)):
         for j in range(len(ma_mm[0])):
             for k in range(len(ma_mm)):
-                grid[i][j]  += int(ma_m[i][k]) * int(ma_mm[k][j])
+                grid[i][j]  + = int(ma_m[i][k]) * int(ma_mm[k][j])
 
     return grid
 def add_matrix(ma_m, ma_mm):
@@ -39,13 +42,12 @@ def add_matrix(ma_m, ma_mm):
             for j in range(len(ma_mm[0])):
                 a_new.append(int(ma_m[i][j])+int(ma_mm[i][j]))
             l_new.append(a_new)
-        return (l_new)
+        return l_new
     else:
         print("Error: Matrix shapes invalid for addition")
         return None
 # except:
     #     return print("Error: Invalid input for the matrix")
-    
 def read_matrix():
     '''
     read the matrix dimensions from input
