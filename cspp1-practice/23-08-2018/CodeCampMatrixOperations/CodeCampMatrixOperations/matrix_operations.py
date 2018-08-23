@@ -76,7 +76,7 @@ def main():
         exit()
     read2_m = read_matrix()
     if read2_m is None:
-        exit
+        exit()
     # print(read_m)
     # print(read2_m)
     print(add_matrix(read_m, read2_m))
