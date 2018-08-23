@@ -17,32 +17,32 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     l_new = []
-    try:
-	    if len(read_m[0]) == len(read2_m[0]):
-	    	for i in range(read_m):
-	    		a_new = []
-	    		for j in range(len(read2_m)):
-	    			a_new.append(read_m[i][j]+read2_m[i][j])
-	    		l_new.append(a_new)
-	    else:
-	    	print("matrix size not eligible for eddition")
-	except:
-		print("Error: Invalid input for the matrix")
-    return l_new
+    # try:
+    if len(m1) == len(m2):
+        for i in range(len(m1)):
+            a_new = []
+            for j in range(len(m2)):
+                a_new.append(int(m1[i][j])+int(m2[i][j]))
+            l_new.append(a_new)
+    else:
+        print("Error: Matrix shapes invalid for addition")
+        print("None")
+# except:
+    #     return print("Error: Invalid input for the matrix")
+    return (l_new)
 def read_matrix():
-		'''
-        read the matrix dimensions from input
-        create a list of lists and read the numbers into it
-        in case there are not enough numbers given in the input
-        print an error message and return None
-        error message should be "Error: Invalid input for the matrix"
+    '''
+    read the matrix dimensions from input
+    create a list of lists and read the numbers into it
+    in case there are not enough numbers given in the input
+    print an error message and return None
+    error message should be "Error: Invalid input for the matrix"
     '''
     lis_t = []
     lis_t_len = input().split(",")
     for i in range(int(lis_t_len[0])):
-    	lis_t.append(input().split(" "))
+        lis_t.append(input().split(" "))
     return lis_t
-
 def main():
     read_m = read_matrix()
     read2_m = read_matrix()
