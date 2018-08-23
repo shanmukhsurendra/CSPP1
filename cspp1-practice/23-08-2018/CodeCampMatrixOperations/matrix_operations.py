@@ -12,7 +12,7 @@ def mult_matrix(m1, m2):
     #         for j in range(len(m2)):
     #             a += m1[i][j]*m2[j][i]
     #         l_new.append(a)
-    grid = [[0]*len(m1)]*len(m2[0])
+    grid = [[[0]*len(m1)]*len(m2[0])]
     for i in range(len(m1)):
         for j in range(len(m2[0])):
             for k in range(len(m2)):
