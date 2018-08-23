@@ -70,7 +70,11 @@ def read_matrix():
     return lis_t
 def main():
     read_m = read_matrix()
+    if read_m is None:
+        exit()
     read2_m = read_matrix()
+    if read2_m is None:
+        exit()
     # print(read_m)
     # print(read2_m)
     print(add_matrix(read_m, read2_m))
