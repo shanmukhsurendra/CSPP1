@@ -53,7 +53,7 @@ def read_matrix():
 def main():
     read_m = read_matrix()
     tuple_output = valid_input_game(read_m)
-    if tuple_output[0] == True:
+    if tuple_output[0] is True:
         print(winn_er(read_m))
     else:
         print(tuple_output[1])
