@@ -14,25 +14,25 @@ def winn_er(read_m):
 
 
 def valid_input_game(read_m):
-    co = 0
-    cou = 0
-    coun = 0
-    count = 0
+    co_o = 0
+    cou_u = 0
+    coun_n = 0
+    count_t = 0
     for i in range(3):
         for j in range(3):
             if read_m[i][j] == 'x':
-                co += 1 
+                co_o += 1 
             elif read_m[i][j] == 'o':
-                cou += 1
+                cou_u += 1
             elif read_m[i][j] == '.':
-                coun += 1
+                coun_n += 1
             else:
-                count += 1
-    if count >= 1:
+                count_t += 1
+    if count_t >= 1:
         return (False, "invalid input")
-    elif co > 5 or cou > 5 or co == cou == coun == 3:
+    elif co_o > 5 or cou_u > 5 or co_o == cou_u == coun_n == 3:
         return (False, "invalid game")
-    elif co == 5 and cou == 4 or co == 4 and cou == 5:
+    elif co_o == 5 and cou_u == 4 or co_o == 4 and cou_u == 5:
         return (False, "draw")     
     return (True,"")
 
