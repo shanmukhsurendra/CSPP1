@@ -47,6 +47,9 @@ def valid_input_game(read_m):
 
 
 def read_matrix():
+    '''
+    to read the input
+    '''
     tic_tac_toe = []
     for i in range(3):
         lis_t = input().split(" ")
