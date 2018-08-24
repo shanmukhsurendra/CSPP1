@@ -33,5 +33,5 @@ def read_matrix():
 
 def main():
     read_m = read_matrix()
-    print(valid_matrix(read_m))
+    print(valid_input(read_m))
 main()
