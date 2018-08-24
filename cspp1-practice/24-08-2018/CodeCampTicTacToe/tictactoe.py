@@ -41,8 +41,8 @@ def read_matrix():
 def main():
     read_m = read_matrix()
     tuple_output = valid_input_game(read_m)
-    print(tuple_output)
     if tuple_output[0]:
+        print(type(tuple_output[0]))
         print(valid_matrix(read_m))
     else:
         print(tuple_output[1])
