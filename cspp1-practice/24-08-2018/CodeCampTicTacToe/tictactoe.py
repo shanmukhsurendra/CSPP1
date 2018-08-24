@@ -17,6 +17,9 @@ def winn_er(read_m):
 
 
 def valid_input_game(read_m):
+    '''
+    to find out the valid input
+    '''
     co_o = 0
     cou_u = 0
     coun_n = 0
