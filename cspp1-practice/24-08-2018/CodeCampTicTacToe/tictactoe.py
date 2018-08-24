@@ -12,9 +12,9 @@ def valid_input(read_m):
         for j in range(3):
             if read_m[i][j] == 'x':
                 co += 1 
-            elif read_m[i][j] != 'o':
+            elif read_m[i][j] == 'o':
                 cou += 1
-            elif read_m[i][j] != '.':
+            elif read_m[i][j] == '.':
                 coun += 1
             else:
                 count += 1
