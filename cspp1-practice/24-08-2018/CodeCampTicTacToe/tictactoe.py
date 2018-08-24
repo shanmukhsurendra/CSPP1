@@ -25,9 +25,10 @@ def valid_input_game(read_m):
             else:
                 count += 1
     if count >= 1:
-        return "invalid input"
+        return False, "invalid input"
     elif co > 5 or cou > 5 or co == cou == coun == 3:
-        return "invalid game"
+        return False, "invalid game"
+    return True
 
 
 def read_matrix():
@@ -39,6 +40,9 @@ def read_matrix():
 
 def main():
     read_m = read_matrix()
-    print(valid_input_game(read_m))
-    print(valid_matrix(read_m))
+    tuple_output = valid_input_game(read_m)
+    if tuple_output[0]:
+        print(valid_matrix(read_m))
+    else:
+        print(tuple_output[1])
 main()
