@@ -12,7 +12,8 @@ def winn_er(read_m):
         return read_m[1][0]
     elif read_m[2][0] == read_m[2][1] == read_m[2][2]:
         return read_m[2][0]
-    elif read_m[0][2] == read_m[1][2] == read_m[2][2] or read_m[2][0] == read_m[1][1] == read_m[0][2]:
+    elif read_m[0][2] == read_m[1][2] == read_m[2][2] or\
+    read_m[2][0] == read_m[1][1] == read_m[0][2]:
         return read_m[0][2]
     elif read_m[0][1] == read_m[1][1] == read_m[2][1]:
         return read_m[0][1]
