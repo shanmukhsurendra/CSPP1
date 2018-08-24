@@ -37,9 +37,9 @@ def valid_input_game(read_m):
                 count_t += 1
     if count_t >= 1:
         return (False, "invalid input")
-    elif co_o > 5 or cou_u > 5 or co_o == cou_u == coun_n == 3:
+    if co_o > 5 or cou_u > 5 or co_o == cou_u == coun_n == 3:
         return (False, "invalid game")
-    elif co_o == 5 and cou_u == 4 or co_o == 4 and cou_u == 5:
+    if co_o == 5 and cou_u == 4 or co_o == 4 and cou_u == 5:
         return (False, "draw")
     return (True, "")
 
