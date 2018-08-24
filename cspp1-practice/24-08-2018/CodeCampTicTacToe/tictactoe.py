@@ -21,7 +21,7 @@ def valid_input_game(read_m):
     for i in range(3):
         for j in range(3):
             if read_m[i][j] == 'x':
-                co_o += 1 
+                co_o += 1
             elif read_m[i][j] == 'o':
                 cou_u += 1
             elif read_m[i][j] == '.':
@@ -33,7 +33,7 @@ def valid_input_game(read_m):
     elif co_o > 5 or cou_u > 5 or co_o == cou_u == coun_n == 3:
         return (False, "invalid game")
     elif co_o == 5 and cou_u == 4 or co_o == 4 and cou_u == 5:
-        return (False, "draw")     
+        return (False, "draw")
     return (True,"")
 
 
