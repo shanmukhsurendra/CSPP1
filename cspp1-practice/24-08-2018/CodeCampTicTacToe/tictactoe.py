@@ -3,7 +3,7 @@
 #         for j in  range(3):
 #             for k in range(3):
 
-def valid_input(read_m):
+def valid_input_game(read_m):
     co = 0
     cou = 0
     coun = 0
@@ -33,5 +33,5 @@ def read_matrix():
 
 def main():
     read_m = read_matrix()
-    print(valid_input(read_m))
+    print(valid_input_game(read_m))
 main()
