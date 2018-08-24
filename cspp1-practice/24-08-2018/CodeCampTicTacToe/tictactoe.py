@@ -5,18 +5,20 @@ def winn_er(read_m):
     '''
     to find out the winner
     '''
+    return_string = ""
     if read_m[0][0] == read_m[0][1] == read_m[0][2] or\
     read_m[0][0] == read_m[1][0] == read_m[2][0] or read_m[0][0] == read_m[1][1] == read_m[2][2]:
-        return read_m[0][0]
+        return_string += read_m[0][0]
     if read_m[1][0] == read_m[1][1] == read_m[1][2]:
-        return read_m[1][0]
+        return_string += read_m[1][0]
     if read_m[2][0] == read_m[2][1] == read_m[2][2]:
-        return read_m[2][0]
+        return_string += read_m[2][0]
     if read_m[0][2] == read_m[1][2] == read_m[2][2] or\
     read_m[2][0] == read_m[1][1] == read_m[0][2]:
-        return read_m[0][2]
+        return_string += read_m[0][2]
     if read_m[0][1] == read_m[1][1] == read_m[2][1]:
-        return read_m[0][1]
+        return_string += read_m[0][1]
+    return return_string
 def valid_input_game(read_m):
     '''
     to find out the valid input
