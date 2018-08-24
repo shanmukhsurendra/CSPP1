@@ -1,7 +1,7 @@
-# def valid_matrix(read_m):
-#     for i in range(3):
-#         for j in  range(3):
-#             for k in range(3):
+def valid_matrix(read_m):
+    for i in range(3):
+        for j in  range(3):
+            for k in range(3):
 
 def valid_input_game(read_m):
     co = 0
@@ -20,7 +20,7 @@ def valid_input_game(read_m):
                 count += 1
     if count >= 1:
         return "invalid input"
-    elif co > 5 or cou > 5:
+    elif co > 5 or cou > 5 or co == cou == coun == 3:
         return "invalid game"
 
 
