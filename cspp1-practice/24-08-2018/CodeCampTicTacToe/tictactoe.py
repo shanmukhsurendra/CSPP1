@@ -30,6 +30,8 @@ def valid_input_game(read_m):
         return (False, "invalid input")
     elif co > 5 or cou > 5 or co == cou == coun == 3:
         return (False, "invalid game")
+    elif co == 5 and cou == 4 or co == 4 and cou == 5:
+        return (False, "draw")     
     return (True,"")
 
 
