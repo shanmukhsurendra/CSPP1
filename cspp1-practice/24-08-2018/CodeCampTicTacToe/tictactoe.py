@@ -28,7 +28,7 @@ def valid_input_game(read_m):
         return (False, "invalid input")
     elif co > 5 or cou > 5 or co == cou == coun == 3:
         return (False, "invalid game")
-    return (True)
+    return (True,"")
 
 
 def read_matrix():
