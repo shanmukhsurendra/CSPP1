@@ -18,6 +18,8 @@ def winn_er(read_m):
         return read_m[2][0]
     elif read_m[0][1] == read_m[1][1] == read_m[2][1]:
         return read_m[0][1]
+    else:
+        pass
 
 
 def valid_input_game(read_m):
