@@ -21,7 +21,7 @@ def valid_input(read_m):
     if count >= 1:
         return "invalid input"
     elif co > 5 or cou > 5:
-        return "invaid game"
+        return "invalid game"
 
 
 def read_matrix():
