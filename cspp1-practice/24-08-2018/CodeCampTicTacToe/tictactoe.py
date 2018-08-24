@@ -1,7 +1,7 @@
-def valid_matrix(read_m):
-    for i in range(3):
-        for j in  range(3):
-            for k in range(3):
+# def valid_matrix(read_m):
+#     for i in range(3):
+#         for j in  range(3):
+#             for k in range(3):
 
 def valid_input(read_m):
     co = 0
