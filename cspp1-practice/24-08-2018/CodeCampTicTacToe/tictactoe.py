@@ -10,7 +10,7 @@ def valid_input(read_m):
     count = 0
     for i in range(3):
         for j in range(3):
-            if read_m[i][j] == 'x'   or 
+            if read_m[i][j] == 'x':
                 co += 1 
             elif read_m[i][j] != 'o':
                 cou += 1
