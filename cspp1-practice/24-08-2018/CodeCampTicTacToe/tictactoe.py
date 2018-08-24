@@ -1,4 +1,7 @@
 def winn_er(read_m):
+    '''
+    to find out the winner
+    '''
     if read_m[0][0] == read_m[0][1] == read_m[0][2] or read_m[0][0] == read_m[1][0] == read_m[2][0] or read_m[0][0] == read_m[1][1] == read_m[2][2]:
         return read_m[0][0]
     elif read_m[1][0] == read_m[1][1] == read_m[1][2]:
@@ -34,7 +37,7 @@ def valid_input_game(read_m):
         return (False, "invalid game")
     elif co_o == 5 and cou_u == 4 or co_o == 4 and cou_u == 5:
         return (False, "draw")
-    return (True,"")
+    return (True, "")
 
 
 def read_matrix():
