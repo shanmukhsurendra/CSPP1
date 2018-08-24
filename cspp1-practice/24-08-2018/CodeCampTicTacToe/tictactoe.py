@@ -5,7 +5,8 @@ def winn_er(read_m):
     '''
     to find out the winner
     '''
-    if read_m[0][0] == read_m[0][1] == read_m[0][2] or read_m[0][0] == read_m[1][0] == read_m[2][0] or read_m[0][0] == read_m[1][1] == read_m[2][2]:
+    if read_m[0][0] == read_m[0][1] == read_m[0][2] or/
+    read_m[0][0] == read_m[1][0] == read_m[2][0] or read_m[0][0] == read_m[1][1] == read_m[2][2]:
         return read_m[0][0]
     elif read_m[1][0] == read_m[1][1] == read_m[1][2]:
         return read_m[1][0]
