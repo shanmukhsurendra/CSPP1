@@ -17,7 +17,6 @@ def winn_er(read_m):
         return read_m[0][2]
     if read_m[0][1] == read_m[1][1] == read_m[2][1]:
         return read_m[0][1]
-    
 def valid_input_game(read_m):
     '''
     to find out the valid input
