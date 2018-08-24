@@ -1,4 +1,4 @@
-def valid_matrix(read_m):
+def winn_er(read_m):
     if read_m[0][0] == read_m[0][1] == read_m[0][2] or read_m[0][0] == read_m[1][0] == read_m[2][0] or read_m[0][0] == read_m[1][1] == read_m[2][2]:
         return read_m[0][0]
     elif read_m[1][0] == read_m[1][1] == read_m[1][2]:
@@ -48,7 +48,7 @@ def main():
     read_m = read_matrix()
     tuple_output = valid_input_game(read_m)
     if tuple_output[0] == True:
-        print(valid_matrix(read_m))
+        print(winn_er(read_m))
     else:
         print(tuple_output[1])
 main()
