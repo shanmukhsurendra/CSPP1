@@ -52,7 +52,7 @@ def read_matrix():
     to read the input
     '''
     tic_tac_toe = []
-    for i_i in range(3):
+    for _ in range(3):
         lis_t = input().split(" ")
         tic_tac_toe.append(lis_t)
     return tic_tac_toe
