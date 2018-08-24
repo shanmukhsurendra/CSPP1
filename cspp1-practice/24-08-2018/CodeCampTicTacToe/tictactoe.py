@@ -51,6 +51,9 @@ def read_matrix():
     return tic_tac_toe
 
 def main():
+    '''
+    main function to call other functions
+    '''
     read_m = read_matrix()
     tuple_output = valid_input_game(read_m)
     if tuple_output[0] is True:
