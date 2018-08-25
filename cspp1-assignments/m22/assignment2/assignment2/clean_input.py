@@ -4,14 +4,14 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
-    # a_a = ""
+    a_a = ""
     # for letter in string:
     #     if letter in islower():
     #         a_a += letter
     # return a_a
     string = (re.sub(r'[^\w\s]', '', string))
-    string.replace(" ", "")
-    return string
+    a_a = string.replace(" ", "")
+    return a_a
 def main():
     string = input()
     print(clean_string(string))
