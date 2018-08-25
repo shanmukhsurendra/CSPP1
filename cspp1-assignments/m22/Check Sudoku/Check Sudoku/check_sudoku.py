@@ -12,7 +12,7 @@ def row_c(sudoku, lis_t):
     for i_i in sudoku:
         a_a = sorted(i_i)
         if lis_t == a_a:
-            count += 1
+            cou_nt += 1
         else:
             return False
     return count == len(sudoku)
