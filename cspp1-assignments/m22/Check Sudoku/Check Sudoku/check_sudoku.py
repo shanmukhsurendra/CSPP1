@@ -7,13 +7,26 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
+def row_c(sudoku, lis_t):
+     count = 0
+    for row in sudoku:
+        sort = sorted(row)
+        if list1 == sort:
+            count += 1
+        else:
+            return False
+    return count == len(sudoku)
+
 
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    pass
+    lis_t = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    if row_c(sudoku, lis_t) and column_c(sudoku, lis_t):
+        return True
+    return False
 
 def main():
     '''
