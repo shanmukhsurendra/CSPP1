@@ -6,7 +6,7 @@ each word
 def tokenize(string):
     lis1_t = []
     lis2_t = []
-    charcter = '":,.'
+    charcter = '":;.'
     dic_t = {}
     for word in string:
         for letter in charcter:
