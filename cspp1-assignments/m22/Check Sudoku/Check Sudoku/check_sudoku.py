@@ -8,14 +8,16 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def row_c(sudoku, lis_t):
-    count = 0
+    cou_nt = 0
     for row in sudoku:
-        sort = sorted(row)
-        if lis_t == sort:
+        a_a = sorted(row)
+        if lis_t == a_a:
             count += 1
         else:
             return False
     return count == len(sudoku)
+def colum_c(sudoku, lis_t):
+
 
 
 def check_sudoku(sudoku):
