@@ -34,7 +34,6 @@ def main():
         del i
         string = input()
         lis_t.append(string)
-    print(tokenize(lis_t))
-
+    print(lis_t)
 if __name__ == '__main__':
     main()
