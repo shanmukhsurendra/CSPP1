@@ -62,7 +62,7 @@ def read_matrix():
     for i in range(int(lis_t_len[0])):
         li_matrix = input().split()
         if columns == len(li_matrix):
-            lis_t.append([int(i) for i in li_matrix])
+             lis_t.append([int(i) for i in li_matrix])
         else:
             print("Error: Invalid input for the matrix")
             return None
