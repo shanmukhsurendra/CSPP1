@@ -4,6 +4,9 @@ each word
 '''
 
 def tokenize(string):
+    '''
+    to count
+    '''
     lis1_t = []
     lis2_t = []
     charcter = '":;,.'
@@ -22,9 +25,13 @@ def tokenize(string):
             dic_t[words] += 1
     return dic_t        
 def main():
+    '''
+    main function
+    '''
     lis_t = []
     n_n = int(input())
     for i in range(n_n):
+        del i
         string = input()
         lis_t.append(string)
     print(tokenize(lis_t))
