@@ -26,7 +26,7 @@ def colum_c(sudoku, lis_t):
         lis1_t.append(lis2_t)
     for i_i in lis1_t:
         a_a = sorted(i_i)
-        if a_a == lis_t:
+        if lis_t == a_a:
             cou_nt += 1
         else:
             return False
