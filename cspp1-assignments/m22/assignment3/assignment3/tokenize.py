@@ -13,6 +13,8 @@ def tokenize(string):
             if charcter in word:
                 word = word.replace(letter, '')
         lis1_t.append(word)
+    for lin in lis1_t:
+        lis2_t.append(lin.split())
     for line in lis2_t:
         for words in line:
             if words not in dic_t:
