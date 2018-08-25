@@ -9,13 +9,10 @@ def tokenize(string):
     '''
     lis1_t = []
     lis2_t = []
-    charcter = '":;,.'
     dic_t = {}
     for word in string:
-        for letter in charcter:
-            if letter in word:
-                word = word.replace(letter, '')
-        lis1_t.append(word)
+        wo_rd = (re.sub(r'[^\w\s]', '', word))
+        lis1_t.append(wo_rd)
     for lin in lis1_t:
         lis2_t.append(lin.split())
     for line in lis2_t:
