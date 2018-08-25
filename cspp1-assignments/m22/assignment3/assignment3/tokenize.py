@@ -4,14 +4,22 @@ each word
 '''
 
 def tokenize(string):
+    lis1_t = []
+    lis2_t = []
+    charcter = '":,.'
     dic_t = {}
     for word in string:
-      for words in word:
-        if words not in dic_t:  
-          dic_t[word] = 1
-      else:
-          dic_t[word] += 1
-    return dic_t  
+        for letter in charcter:
+            if charcter in word:
+                word = word.replace(letter, '')
+        lis1_t.append(word)
+    for line in lis2_t:
+        for words in line:
+            if words not in dic_t:
+                dic_t[words] = 1
+            else:
+                dic_t[words] += 1
+    return dic_t
             
 def main():
     lis_t = []
