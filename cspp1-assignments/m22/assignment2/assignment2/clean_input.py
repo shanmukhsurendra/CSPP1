@@ -10,6 +10,7 @@ def clean_string(string):
     #         a_a += letter
     # return a_a
     string = (re.sub(r'[^\w\s]', '', string))
+    string.replace(" ", "")
     return string
 def main():
     string = input()
