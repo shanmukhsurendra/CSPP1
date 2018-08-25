@@ -5,7 +5,7 @@ each word
 
 def tokenize(string):
     dic_t = {}
-    for word in lis_t:
+    for word in string:
       for words in word:
         if words not in dic_t:  
           dic_t[word] = 1
