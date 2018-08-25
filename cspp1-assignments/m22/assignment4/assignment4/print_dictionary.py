@@ -9,7 +9,7 @@ def print_dictionary(dictionary):
     to print dictionary
     '''
     for key, value in sorted(dictionary.items()):
-        a_a = print ( str(key) + " - " + str(value) )
+        a_a = print(str(key) + " - " + str(value))
     return a_a
 def main():
     '''
