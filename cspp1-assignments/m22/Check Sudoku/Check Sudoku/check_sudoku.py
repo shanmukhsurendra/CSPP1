@@ -53,7 +53,7 @@ def main():
     # loop to read 9 lines of input from console
     for i in range(9):
         # read a line, split it on SPACE and append row to list
-        row = input().split(' ')
+        row = list(map(int, input().split(' ')))
         sudoku.append(row)
     # call solution function and print result to console
     print(check_sudoku(sudoku))
