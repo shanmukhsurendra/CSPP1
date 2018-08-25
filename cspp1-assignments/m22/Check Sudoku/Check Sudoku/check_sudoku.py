@@ -19,9 +19,10 @@ def row_c(sudoku, lis_t):
 def column_c(sudoku, lis_t):
     cou_nt = 0
     lis1_t = []
-    for i_i in enumerate(sudoku):
+    leng_th = len(sudoku)
+    for i_i in range(leng_th):
         lis2_t = []
-        for a_a in enumerate(sudoku):
+        for a_a in range(leng_th):
             lis2_t.append(sudoku[a_a][i_i])
         lis1_t.append(lis2_t)
     for i_i in lis1_t:
