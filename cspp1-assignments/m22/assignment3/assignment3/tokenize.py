@@ -10,7 +10,7 @@ def tokenize(string):
     dic_t = {}
     for word in string:
         for letter in charcter:
-            if char in word:
+            if letter in word:
                 word = word.replace(letter, '')
         lis1_t.append(word)
     for lin in lis1_t:
