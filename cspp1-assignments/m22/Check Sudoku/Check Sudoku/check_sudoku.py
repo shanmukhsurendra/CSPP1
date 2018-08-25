@@ -15,7 +15,7 @@ def row_c(sudoku, lis_t):
             cou_nt += 1
         else:
             return False
-    return count == len(sudoku)
+    return cou_nt == len(sudoku)
 def colum_c(sudoku, lis_t):
     cou_nt = 0
     lis1_t = []
