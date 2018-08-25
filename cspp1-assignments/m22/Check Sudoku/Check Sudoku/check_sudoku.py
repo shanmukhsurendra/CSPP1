@@ -8,7 +8,7 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def row_c(sudoku, lis_t):
-     count = 0
+    count = 0
     for row in sudoku:
         sort = sorted(row)
         if list1 == sort:
