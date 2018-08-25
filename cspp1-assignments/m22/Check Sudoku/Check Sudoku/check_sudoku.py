@@ -19,9 +19,9 @@ def row_c(sudoku, lis_t):
 def column_c(sudoku, lis_t):
     cou_nt = 0
     lis1_t = []
-    for i_i in range(len(sudoku)):
+    for i_i in enumerate(sudoku):
         lis2_t = []
-        for a_a in range(len(sudoku)):
+        for a_a in enumerate(sudoku):
             lis2_t.append(sudoku[a_a][i_i])
         lis1_t.append(lis2_t)
     for i_i in lis1_t:
@@ -52,6 +52,7 @@ def main():
 
     # loop to read 9 lines of input from console
     for i in range(9):
+        del i
         # read a line, split it on SPACE and append row to list
         row = list(map(int, input().split(' ')))
         sudoku.append(row)
