@@ -18,9 +18,8 @@ def tokenize(string):
     for line in lis2_t:
         for words in line:
             if words not in dic_t.keys():
-                dic_t[words] = 1
-            else:
-                dic_t[words] += 1
+                dic_t[words] = 0
+            dic_t[words] += 1
     return dic_t
             
 def main():
