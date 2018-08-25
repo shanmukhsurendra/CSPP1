@@ -4,10 +4,11 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    for letter in string:
-    	if string in islower():
-    		a_a = string.replace(" ", "")
-    return a_a
+    # for letter in string:
+    # 	if string in islower():
+    # 		a_a = string.replace(" ", "")
+    string = re.sub(r'[^\w\s]')
+    return string
 def main():
     string = input()
     print(clean_string(string))
