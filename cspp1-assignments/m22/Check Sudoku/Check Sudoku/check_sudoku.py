@@ -28,7 +28,7 @@ def column_c(sudoku, lis_t):
     leng_th = len(sudoku)
     for i_i in range(leng_th):
         lis2_t = []
-        for a_a in range(leng_th):
+        while a_a <= range(leng_th):
             lis2_t.append(sudoku[a_a][i_i])
         lis1_t.append(lis2_t)
     for i_i in lis1_t:
