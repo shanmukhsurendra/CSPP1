@@ -9,8 +9,8 @@
 '''
 def row_c(sudoku, lis_t):
     cou_nt = 0
-    for row in sudoku:
-        a_a = sorted(row)
+    for i_i in sudoku:
+        a_a = sorted(i_i)
         if lis_t == a_a:
             count += 1
         else:
