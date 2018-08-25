@@ -16,7 +16,22 @@ def row_c(sudoku, lis_t):
         else:
             return False
     return count == len(sudoku)
-# def colum_c(sudoku, lis_t):
+def colum_c(sudoku, lis_t):
+    cou_nt = 0
+    lis1_t = []
+    for i_i in range(len(sudoku)):
+        lis2_t = []
+        for a_a in range(len(sudoku)):
+            lis2_t.append(sudoku[a_a][i_i])
+        lis1_t.append(lis2_t)
+    for i_i in lis2_t:
+        a_a = sorted(row)
+        if a_a == lis_t:
+            cou_nt += 1
+        else:
+            return False
+    return count == len(sudoku)
+
 
 
 
