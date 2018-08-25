@@ -4,19 +4,22 @@ each word
 '''
 
 def tokenize(string):
-    lis_t = []
     dic_t = {}
-    lis_t = string.split()
     for word in lis_t:
-    	if word not in dic_t:
-    		dic_t[word] = 1
-    	else:
-    		dic_t[word] += 1
-    return	 dic_t	
+      for words in word:
+        if words not in dic_t:  
+          dic_t[word] = 1
+      else:
+          dic_t[word] += 1
+    return dic_t  
             
 def main():
-    string = input()
-    print(tokenize(string))
+    lis_t = []
+    n_n = int(input())
+    for i in range(n_n):
+        string = input()
+        lis_t.append(string)
+    print(tokenize(lis_t))
 
 if __name__ == '__main__':
     main()
