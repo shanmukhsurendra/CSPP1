@@ -20,8 +20,7 @@ def tokenize(string):
             if words not in dic_t.keys():
                 dic_t[words] = 0
             dic_t[words] += 1
-    return dic_t
-            
+    return dic_t        
 def main():
     lis_t = []
     n_n = int(input())
