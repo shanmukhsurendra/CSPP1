@@ -8,10 +8,6 @@ def clean_string(string):
     to clean string
     '''
     a_a = ""
-    # for letter in string:
-    #     if letter in islower():
-    #         a_a += letter
-    # return a_a
     string = (re.sub(r'[^\w\s]', '', string))
     a_a = string.replace(" ", "")
     return a_a
