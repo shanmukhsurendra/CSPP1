@@ -8,6 +8,9 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def row_c(sudoku, lis_t):
+    '''
+    to check the rows
+    '''
     cou_nt = 0
     for i_i in sudoku:
         a_a = sorted(i_i)
@@ -17,6 +20,9 @@ def row_c(sudoku, lis_t):
             return False
     return cou_nt == len(sudoku)
 def column_c(sudoku, lis_t):
+    '''
+    to check the columns
+    '''
     cou_nt = 0
     lis1_t = []
     leng_th = len(sudoku)
@@ -47,7 +53,6 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
 
