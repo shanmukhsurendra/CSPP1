@@ -4,7 +4,8 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    pass
+    string.strip()
+    return string
 
 def main():
     string = input()
