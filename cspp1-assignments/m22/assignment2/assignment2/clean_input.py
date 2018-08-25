@@ -4,10 +4,10 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
-	a_a = ""
+    a_a = ""
     for letter in string:
-    	if letter in islower():
-    		a_a += letter
+        if letter in islower():
+            a_a += letter
     return a_a
 def main():
     string = input()
