@@ -7,7 +7,7 @@ the key and frequency with a SPACE - SPACE.
 def print_dictionary(dictionary):
     for key,value in dictionary.items():
     	a = print (str(key) + " - " + str(value))
-    return a.sort()
+    return a.sorted()
 def main():
     dictionary = eval(input())
     print_dictionary(dictionary)
