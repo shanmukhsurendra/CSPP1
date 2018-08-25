@@ -6,11 +6,11 @@ each word
 def tokenize(string):
     lis1_t = []
     lis2_t = []
-    charcter = '"":,.'
+    charcter = '":,.'
     dic_t = {}
     for word in string:
         for letter in charcter:
-            if charcter in word:
+            if char in word:
                 word = word.replace(letter, '')
         lis1_t.append(word)
     for lin in lis1_t:
