@@ -1,9 +1,12 @@
 '''
-Write a function to clean up a given string by removing the special characters and retain 
+Write a function to clean up a given string by removing the special characters and retain
 alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
+    '''
+    to clean string
+    '''
     a_a = ""
     # for letter in string:
     #     if letter in islower():
@@ -13,6 +16,9 @@ def clean_string(string):
     a_a = string.replace(" ", "")
     return a_a
 def main():
+    '''
+    main fucntion
+    '''
     string = input()
     print(clean_string(string))
 
