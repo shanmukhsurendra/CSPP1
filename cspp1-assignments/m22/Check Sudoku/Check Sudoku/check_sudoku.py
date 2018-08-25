@@ -11,7 +11,7 @@ def row_c(sudoku, lis_t):
     count = 0
     for row in sudoku:
         sort = sorted(row)
-        if list1 == sort:
+        if lis_t == sort:
             count += 1
         else:
             return False
