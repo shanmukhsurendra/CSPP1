@@ -31,10 +31,6 @@ def colum_c(sudoku, lis_t):
         else:
             return False
     return count == len(sudoku)
-
-
-
-
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
